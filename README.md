@@ -13,8 +13,8 @@ JScent is aimed at developers and teams who are trying to build code that is mai
 
 JScent is structured in a way that it is easily extensible to add new code smells in the future. Next steps for the team include adding more nuanced, difficult to spot smells to the analysis report.
 
-Instructions: Put all the JS files you want to analyze in the /input folder, and run main.js to start.
+**Instructions**: Put all the JS files you want to analyze in the /input folder, and run main.js to start.
 
 
 
-Credit: Initial program parsing done using the esprima node library (esprima.org)
+**Credit**: Initial program parsing done using the esprima node library (esprima.org)
