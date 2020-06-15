@@ -3,12 +3,13 @@ export default class ARRAYEXPRESSION {
         this.elements = [];
         for (let elem of node.elements) {
             if (elem.type === "SpreadElement") {
-                let temp = new SPREADELEMENT(elem);
-                this.elements.add(temp);
-                temp.parse();
+                let temp = new SPREADELEMENT();
+                this.elements.push(temp);
+                temp.parse(elem);
             } else {
-                let temp = new EXPRESSION(elem)
-                this.elements.add(temp);
+                let temp = new EXPRESSION();
+                this.elements.push(temp);
+                temp.parse(elem);
             }
         }
     }
