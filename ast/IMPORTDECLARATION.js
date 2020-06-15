@@ -1,11 +1,12 @@
 export default class IMPORTDECLARATION {
     parse(node){
         this.importspecifiers = [];
-        this.source = node.source;
         for(let importspecifier of node.importspecifiers){
-            let temp = new IMPORTSPECIFIER(importspecifier);
+            let temp = new IMPORTSPECIFIER();
             this.importspecifiers.push(temp);
-            temp.parse();
+            temp.parse(importspecifier);
         }
+        this.source = new LITERAL();
+        this.source.parse(node.source);
     }
 }

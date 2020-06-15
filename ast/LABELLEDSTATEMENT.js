@@ -1,6 +1,9 @@
 export default class LABELLEDSTATEMENT{
     parse(node){
-        this.label = node.label;
-        this.body = node.body;
+        this.label = new IDENTIFIER();
+        this.label.parse(node.label);
+
+        this.body = new STATEMENT();
+        this.body.parse(node.body);
     }
 }
