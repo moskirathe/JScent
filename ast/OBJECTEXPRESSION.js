@@ -1,4 +1,3 @@
-const PROPERTY = require("./PROPERTY");
 
 module.exports = class OBJECTEXPRESSION{
     parse(node){
@@ -10,3 +9,5 @@ module.exports = class OBJECTEXPRESSION{
         }
     }
 }
+
+const PROPERTY = require("./PROPERTY");

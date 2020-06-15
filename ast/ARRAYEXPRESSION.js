@@ -1,6 +1,3 @@
-const SPREADELEMENT = require("./SPREADELEMENT");
-const EXPRESSION = require("./EXPRESSION");
-
 module.exports = class ARRAYEXPRESSION {
     parse(node) {
         this.elements = [];
@@ -23,3 +20,6 @@ module.exports = class ARRAYEXPRESSION {
         }
     }
 }
+
+const SPREADELEMENT = require("./SPREADELEMENT");
+const EXPRESSION = require("./EXPRESSION");

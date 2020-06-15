@@ -1,13 +1,10 @@
-const ASSIGNMENTPATTERN = require("./ASSIGNMENTPATTERN");
-const IDENTIFIER = require("./IDENTIFIER");
-const BINDINGPATTERN = require("./BINDINGPATTERN");
 
 module.exports = class FUNCTIONPARAMETER {
     parse(node) {
         if (node.type === "AssignmentPattern") {
             this.type = new ASSIGNMENTPATTERN();
             this.type.parse(node);
-        } else if (node.type === " Identifier") {
+        } else if (node.type === "Identifier") {
             this.type = new IDENTIFIER();
             this.type.parse(node);
         } else {
@@ -16,3 +13,8 @@ module.exports = class FUNCTIONPARAMETER {
         }
     }
 }
+
+const ASSIGNMENTPATTERN = require("./ASSIGNMENTPATTERN");
+const IDENTIFIER = require("./IDENTIFIER");
+const BINDINGPATTERN = require("./BINDINGPATTERN");
+

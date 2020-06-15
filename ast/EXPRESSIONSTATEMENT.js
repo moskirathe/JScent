@@ -1,4 +1,3 @@
-const EXPRESSION = require("./EXPRESSION");
 
 // interface ExpressionStatement {
 //     type: 'ExpressionStatement';
@@ -12,3 +11,5 @@ module.exports = class EXPRESSIONSTATEMENT {
         this.expression.parse(node.expression);
     }
 }
+
+const EXPRESSION = require("./EXPRESSION");

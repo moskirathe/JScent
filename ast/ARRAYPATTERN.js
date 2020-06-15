@@ -1,7 +1,3 @@
-const ASSIGNMENTPATTERN = require("./ASSIGNMENTPATTERN");
-const IDENTIFIER = require("./IDENTIFIER");
-const RESTELEMENT = require("./RESTELEMENT");
-const BINDINGPATTERN = require("./BINDINGPATTERN");
 
 module.exports = class ARRAYPATTERN {
     parse(node) {
@@ -35,3 +31,8 @@ module.exports = class ARRAYPATTERN {
         }
     }
 }
+
+const ASSIGNMENTPATTERN = require("./ASSIGNMENTPATTERN");
+const IDENTIFIER = require("./IDENTIFIER");
+const RESTELEMENT = require("./RESTELEMENT");
+const BINDINGPATTERN = require("./BINDINGPATTERN");

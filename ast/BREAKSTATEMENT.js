@@ -1,4 +1,3 @@
-const IDENTIFIER = require("./IDENTIFIER");
 
 module.exports = class BREAKSTATEMENT {
     parse(node) {
@@ -9,4 +8,10 @@ module.exports = class BREAKSTATEMENT {
             this.label = null;
         }
     }
+
+    evaluate(table) {
+        this.label.evaluate(table);
+    }
 }
+
+const IDENTIFIER = require("./IDENTIFIER");

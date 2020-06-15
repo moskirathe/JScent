@@ -1,7 +1,3 @@
-const CLASSDECLARATION = require("./CLASSDECLARATION");
-const FUNCTIONDECLARATION = require("./FUNCTIONDECLARATION");
-const VARIABLEDECLARATION = require("./VARIABLEDECLARATION");
-
 module.exports = class DECLARATION {
     parse(node) {
         if (node.type === "ClassDeclaration") {
@@ -16,3 +12,7 @@ module.exports = class DECLARATION {
         }
     }
 }
+
+const CLASSDECLARATION = require("./CLASSDECLARATION");
+const FUNCTIONDECLARATION = require("./FUNCTIONDECLARATION");
+const VARIABLEDECLARATION = require("./VARIABLEDECLARATION");

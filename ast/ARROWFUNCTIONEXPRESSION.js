@@ -1,12 +1,12 @@
-const IDENTIFIER = require("./IDENTIFIER");
-const FUNCTIONPARAMETER = require("./FUNCTIONPARAMETER");
-const BLOCKSTATEMENT = require("./BLOCKSTATEMENT");
-const EXPRESSION = require("./EXPRESSION");
 
 module.exports =  class ARROWFUNCTIONEXPRESSION {
     parse(node) {
-        this.id = new IDENTIFIER();
-        this.id.parse(node.id);
+        if (node.id !== null) {
+            this.id = new IDENTIFIER();
+            this.id.parse(node.id);
+        } else {
+            this.id = null;
+        }
         this.params = [];
         for (let param of node.params) {
             let temp = new FUNCTIONPARAMETER();
@@ -30,3 +30,8 @@ module.exports =  class ARROWFUNCTIONEXPRESSION {
         }
     }
 }
+
+const IDENTIFIER = require("./IDENTIFIER");
+const FUNCTIONPARAMETER = require("./FUNCTIONPARAMETER");
+const BLOCKSTATEMENT = require("./BLOCKSTATEMENT");
+const EXPRESSION = require("./EXPRESSION");

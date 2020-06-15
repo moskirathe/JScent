@@ -1,4 +1,3 @@
-const METHODDEFINITION = require("./METHODDEFINITION");
 
 module.exports = class CLASSBODY {
     parse(node) {
@@ -9,4 +8,12 @@ module.exports = class CLASSBODY {
             temp.parse(method);
         }
     }
+
+    evaluate(table) {
+        for (let item of this.body) {
+            item.evaluate(table);
+        }
+    }
 }
+
+const METHODDEFINITION = require("./METHODDEFINITION");

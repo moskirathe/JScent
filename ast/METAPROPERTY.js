@@ -1,4 +1,3 @@
-const IDENTIFIER = require("./IDENTIFIER");
 
 module.exports = class METAPROPERTY{
     parse(node){
@@ -8,3 +7,5 @@ module.exports = class METAPROPERTY{
         this.property.parse(node.property);
     }
 }
+
+const IDENTIFIER = require("./IDENTIFIER");

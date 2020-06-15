@@ -1,7 +1,4 @@
-const STATEMENTLISTITEM = require("./STATEMENTLISTITEM");
-const MODULEITEM = require("./MODULEITEM");
-
-module.exports = class PROGRAM{
+class PROGRAM{
     parse(node){
         this.sourceType = node.sourceType;
         this.body = [];
@@ -20,3 +17,8 @@ module.exports = class PROGRAM{
         }
     }
 }
+
+module.exports = PROGRAM;
+
+const STATEMENTLISTITEM = require("./STATEMENTLISTITEM");
+const MODULEITEM = require("./MODULEITEM");

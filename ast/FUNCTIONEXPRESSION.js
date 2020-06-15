@@ -1,6 +1,3 @@
-const IDENTIFIER = require("./IDENTIFIER");
-const FUNCTIONPARAMETER = require("./FUNCTIONPARAMETER");
-const BLOCKSTATEMENT = require("./BLOCKSTATEMENT");
 
 // interface FunctionExpression {
 //     type: 'FunctionExpression';
@@ -28,3 +25,8 @@ module.exports = class FUNCTIONEXPRESSION {
         temp.parse(node.body);
     }
 }
+
+const IDENTIFIER = require("./IDENTIFIER");
+const FUNCTIONPARAMETER = require("./FUNCTIONPARAMETER");
+const BLOCKSTATEMENT = require("./BLOCKSTATEMENT");
+

@@ -1,5 +1,3 @@
-const TEMPLATEELEMENT = require ("./TEMPLATEELEMENT");
-const EXPRESSION = require("./EXPRESSION");
 
 module.exports = class TEMPLATELITERAL {
     parse(node){
@@ -17,3 +15,6 @@ module.exports = class TEMPLATELITERAL {
         }
     }
 }
+
+const TEMPLATEELEMENT = require ("./TEMPLATEELEMENT");
+const EXPRESSION = require("./EXPRESSION");

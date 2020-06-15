@@ -1,6 +1,3 @@
-const IDENTIFIER = require("./IDENTIFIER");
-const BINDINGPATTERN = require("./BINDINGPATTERN");
-const BLOCKSTATEMENT = require("./BLOCKSTATEMENT");
 
 module.exports = class CATCHCLAUSE {
     parse(node) {
@@ -14,4 +11,13 @@ module.exports = class CATCHCLAUSE {
         this.body = new BLOCKSTATEMENT();
         this.body.parse();
     }
+
+    evaluate(table) {
+        this.param.evaluate(table);
+        this.body.evaluate(table);
+    }
 }
+
+const IDENTIFIER = require("./IDENTIFIER");
+const BINDINGPATTERN = require("./BINDINGPATTERN");
+const BLOCKSTATEMENT = require("./BLOCKSTATEMENT");

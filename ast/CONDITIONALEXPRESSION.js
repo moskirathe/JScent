@@ -1,4 +1,3 @@
-const EXPRESSION = require("./EXPRESSION");
 
 module.exports = class CONDITIONALEXPRESSION {
     parse(node) {
@@ -10,3 +9,5 @@ module.exports = class CONDITIONALEXPRESSION {
         this.alternate.parse(node.alternate);
     }
 }
+
+const EXPRESSION = require("./EXPRESSION");

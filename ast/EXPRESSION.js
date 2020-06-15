@@ -1,27 +1,3 @@
-const THISEXPRESSION = require("./THISEXPRESSION");
-const IDENTIFIER = require("./IDENTIFIER");
-const LITERAL = require("./LITERAL");
-const ARRAYEXPRESSION = require("./ARRAYEXPRESSION");
-const OBJECTEXPRESSION = require("./OBJECTEXPRESSION");
-const FUNCTIONEXPRESSION = require("./FUNCTIONEXPRESSION");
-const ARROWFUNCTIONEXPRESSION = require("./ARROWFUNCTIONEXPRESSION");
-const CLASSEXPRESSION = require("./CLASSEXPRESSION");
-const TAGGEDTEMPLATEEXPRESSION = require("./TAGGEDTEMPLATEEXPRESSION");
-const MEMBEREXPRESSION = require("./MEMBEREXPRESSION");
-const SUPER = require("./SUPER");
-const METAPROPERTY = require("./METAPROPERTY");
-const NEWEXPRESSION = require("./NEWEXPRESSION");
-const CALLEXPRESSION = require("./CALLEXPRESSION");
-const UPDATEEXPRESSION = require("./UPDATEEXPRESSION");
-const AWAITEXPRESSION = require("./AWAITEXPRESSION");
-const UNARYEXPRESSION = require("./UNARYEXPRESSION");
-const BINARYEXPRESSION = require("./BINARYEXPRESSION");
-const LOGICALEXPRESSION = require("./LOGICALEXPRESSION");
-const CONDITIONALEXPRESSION = require("./CONDITIONALEXPRESSION");
-const YIELDEXPRESSION = require("./YIELDEXPRESSION");
-const ASSIGNMENTEXPRESSION = require("./ASSIGNMENTEXPRESSION");
-const SEQUENCEEXPRESSION = require("./SEQUENCEEXPRESSION");
-
 //type Expression = ThisExpression | Identifier | Literal |
 //    ArrayExpression | ObjectExpression | FunctionExpression | ArrowFunctionExpression | ClassExpression |
 //    TaggedTemplateExpression | MemberExpression | Super | MetaProperty |
@@ -133,3 +109,27 @@ module.exports = class EXPRESSION {
         this.type.evaluate(table);
     }
 }
+
+const THISEXPRESSION = require("./THISEXPRESSION");
+const IDENTIFIER = require("./IDENTIFIER");
+const LITERAL = require("./LITERAL");
+const ARRAYEXPRESSION = require("./ARRAYEXPRESSION");
+const OBJECTEXPRESSION = require("./OBJECTEXPRESSION");
+const FUNCTIONEXPRESSION = require("./FUNCTIONEXPRESSION");
+const ARROWFUNCTIONEXPRESSION = require("./ARROWFUNCTIONEXPRESSION");
+const CLASSEXPRESSION = require("./CLASSEXPRESSION");
+const TAGGEDTEMPLATEEXPRESSION = require("./TAGGEDTEMPLATEEXPRESSION");
+const MEMBEREXPRESSION = require("./MEMBEREXPRESSION");
+const SUPER = require("./SUPER");
+const METAPROPERTY = require("./METAPROPERTY");
+const NEWEXPRESSION = require("./NEWEXPRESSION");
+const CALLEXPRESSION = require("./CALLEXPRESSION");
+const UPDATEEXPRESSION = require("./UPDATEEXPRESSION");
+const AWAITEXPRESSION = require("./AWAITEXPRESSION");
+const UNARYEXPRESSION = require("./UNARYEXPRESSION");
+const BINARYEXPRESSION = require("./BINARYEXPRESSION");
+const LOGICALEXPRESSION = require("./LOGICALEXPRESSION");
+const CONDITIONALEXPRESSION = require("./CONDITIONALEXPRESSION");
+const YIELDEXPRESSION = require("./YIELDEXPRESSION");
+const ASSIGNMENTEXPRESSION = require("./ASSIGNMENTEXPRESSION");
+const SEQUENCEEXPRESSION = require("./SEQUENCEEXPRESSION");

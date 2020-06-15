@@ -1,4 +1,3 @@
-const EXPRESSION = require("./EXPRESSION");
 
 module.exports = class PROPERTY {
     parse(node) {
@@ -17,3 +16,5 @@ module.exports = class PROPERTY {
 
     }
 }
+
+const EXPRESSION = require("./EXPRESSION");

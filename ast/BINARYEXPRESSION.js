@@ -1,4 +1,3 @@
-const EXPRESSION = require("./EXPRESSION");
 
 module.exports = class BINARYEXPRESSION {
     parse(node) {
@@ -7,4 +6,11 @@ module.exports = class BINARYEXPRESSION {
         this.right = new EXPRESSION();
         this.right.parse(node.right);
     }
+
+    evaluate(table) {
+        this.left.evaluate(table);
+        this.right.evaluate(table);
+    }
 }
+
+const EXPRESSION = require("./EXPRESSION");

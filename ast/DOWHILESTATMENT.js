@@ -1,5 +1,3 @@
-const STATEMENT = require("./STATEMENT");
-const EXPRESSION = require("./EXPRESSION");
 
 // interface DoWhileStatement {
 //     type: 'DoWhileStatement';
@@ -18,3 +16,6 @@ module.exports = class DOWHILESTATMENT {
         e.parse(node.test);
     }
 }
+
+const STATEMENT = require("./STATEMENT");
+const EXPRESSION = require("./EXPRESSION");

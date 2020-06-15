@@ -1,4 +1,3 @@
-const IDENTIFIER = require("./IDENTIFIER");
 
 module.exports = class IMPORTSPECIFIER {
     parse(node){
@@ -11,3 +10,5 @@ module.exports = class IMPORTSPECIFIER {
         }
     }
 }
+
+const IDENTIFIER = require("./IDENTIFIER");

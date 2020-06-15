@@ -1,5 +1,3 @@
-const LITERAL = require("./LITERAL");
-const IMPORTSPECIFIER = require("./IMPORTSPECIFIER");
 
 module.exports = class IMPORTDECLARATION {
     parse(node){
@@ -13,3 +11,6 @@ module.exports = class IMPORTDECLARATION {
         this.source.parse(node.source);
     }
 }
+
+const LITERAL = require("./LITERAL");
+const IMPORTSPECIFIER = require("./IMPORTSPECIFIER");

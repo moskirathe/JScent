@@ -1,4 +1,3 @@
-const EXPRESSION = require("./EXPRESSION");
 
 module.exports = class MEMBEREXPRESSION{
     parse(node){
@@ -8,4 +7,12 @@ module.exports = class MEMBEREXPRESSION{
         this.property = new EXPRESSION();
         this.property.parse(node.property);
     }
+
+    evaluate(table) {
+        let object = this.object.evaluate(table);
+        let property = this.property.evaluate(table)
+        table.memberCalls[object] = property;
+    }
 }
+
+const EXPRESSION = require("./EXPRESSION");

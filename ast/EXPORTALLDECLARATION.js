@@ -1,4 +1,3 @@
-const LITERAL = require("./LITERAL");
 
 // interface ExportAllDeclaration {
 //     type: 'ExportAllDeclaration';
@@ -11,3 +10,5 @@ module.exports = class EXPORTALLDECLARATION {
         this.source.parse(node.source);
     }
 }
+
+const LITERAL = require("./LITERAL");

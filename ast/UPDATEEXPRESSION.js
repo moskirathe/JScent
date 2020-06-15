@@ -1,4 +1,3 @@
-const EXPRESSION = require("./EXPRESSION");
 
 module.exports = class UPDATEEXPRESSION {
     parse(node) {
@@ -6,3 +5,5 @@ module.exports = class UPDATEEXPRESSION {
         this.argument.parse(node.argument);
     }
 }
+
+const EXPRESSION = require("./EXPRESSION");
