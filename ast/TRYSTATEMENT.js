@@ -8,13 +8,13 @@ export default class TRYSTATEMENT {
             this.handler = new CATCHCLAUSE();
             this.handler.parse(node.handler);
         } else {
-            this.handler = null
+            this.handler = null;
         }
         if (node.finalizer !== null) {
             this.finalizer = new BLOCKSTATEMENT();
             this.finalizer.parse(node.finalizer);
         } else {
-            this.finalizer = null
+            this.finalizer = null;
         }
     }
 }

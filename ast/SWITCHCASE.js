@@ -6,7 +6,7 @@ export default class SWITCHCASE {
             this.test = new EXPRESSION();
             this.test.parse(node.test);
         } else {
-            this.test = null
+            this.test = null;
         }
         this.consequent = [];
         for (let consequent of node.consequent) {
