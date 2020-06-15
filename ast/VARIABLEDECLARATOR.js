@@ -1,6 +1,7 @@
 
 module.exports = class VARIABLEDECLARATOR {
     parse(node) {
+        this.loc = node.loc;
         if (node.id.type === "Identifier") {
             let temp = new IDENTIFIER();
             this.id = temp;

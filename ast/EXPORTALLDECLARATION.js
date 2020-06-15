@@ -6,6 +6,7 @@
 
 module.exports = class EXPORTALLDECLARATION {
     parse(node) {
+        this.loc = node.loc;
         this.source = new LITERAL();
         this.source.parse(node.source);
     }

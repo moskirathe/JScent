@@ -1,6 +1,7 @@
 
 module.exports = class NEWEXPRESSION{
     parse(node){
+        this.loc = node.loc;
         this.callee = new EXPRESSION();
         this.callee.parse(node.callee);
         this.arguments = [];

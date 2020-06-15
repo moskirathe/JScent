@@ -7,6 +7,7 @@
 
 module.exports = class EXPRESSION {
     parse(node) {
+        this.loc = node.loc;
         switch(node.type) {
             case ("ThisExpression"):
                 this.type = new THISEXPRESSION();

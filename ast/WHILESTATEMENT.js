@@ -1,6 +1,7 @@
 
 module.exports = class WHILESTATEMENT {
     parse(node) {
+        this.loc = node.loc;
         this.test = new EXPRESSION();
         this.test.parse(node["test"]);
         this.body = new STATEMENT();

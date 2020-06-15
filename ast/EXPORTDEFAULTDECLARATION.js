@@ -5,6 +5,7 @@
 
 module.exports = class EXPORTDEFAULTDECLARATION {
     parse(node) {
+        this.loc = node.loc;
         if (node.declaration.type === "Identifier") {
             let temp = new IDENTIFIER();
             this.declaration = temp;

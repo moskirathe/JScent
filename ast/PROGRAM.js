@@ -1,5 +1,6 @@
 class PROGRAM{
     parse(node){
+        this.loc = node.loc;
         this.sourceType = node.sourceType;
         this.body = [];
         if(this.sourceType === 'script'){

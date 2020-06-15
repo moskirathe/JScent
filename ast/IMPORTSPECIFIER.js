@@ -1,6 +1,7 @@
 
 module.exports = class IMPORTSPECIFIER {
     parse(node){
+        this.loc = node.loc;
         this.local = new IDENTIFIER();
         this.local.parse(node.local);
 

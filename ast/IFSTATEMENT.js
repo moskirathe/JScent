@@ -8,6 +8,7 @@
 
 module.exports = class IFSTATEMENT {
     parse(node) {
+        this.loc = node.loc;
         this.test = new EXPRESSION();
         this.test.parse(node.test);
 

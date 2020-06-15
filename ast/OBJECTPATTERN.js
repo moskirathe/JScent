@@ -1,6 +1,7 @@
 
 module.exports = class OBJECTPATTERN{
     parse(node){
+        this.loc = node.loc;
         this.properties = [];
         for(let property of node.properties){
             let temp = new PROPERTY();
