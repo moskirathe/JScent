@@ -7,10 +7,15 @@ module.exports = class MEMBEREXPRESSION{
         this.loc = node.loc;
         this.comments = node.comments;
         this.computed = node.computed;
+        this.long = false;
         this.object = new EXPRESSION();
         if (node.object.type.includes("MemberExpression")) {
             this.object.parse(node.object);
             this.callChain = this.object.type.getCallChain() + 1;
+            if (this.getCallChain() > 2 || this.long) {
+                this.long = true;
+                this.callChain = 0;
+            }
         } else {
             this.object.parse(node.object);
         }
@@ -26,7 +31,7 @@ module.exports = class MEMBEREXPRESSION{
         } else {
             table.memberCalls[object] = [this.loc];
         }
-        if (this.callChain > 3) {
+        if (this.long) {
             table.longChains.push(this.loc);
         }
         return this.object;

@@ -243,6 +243,9 @@ const program = "const express = require('express');\n" +
     "       stock = stock.split(\",\");\n" +
     "       result[stock[0].trim()] = stock[1];\n" +
     "    }\n" +
+    "    let a = b.test.test\n" +
+    "    let a = b.test.test.test\n" +
+    "    let a = b.test.test.test.test\n" +
     "    let a = b.test.test.test.test.test\n" +
     "    \n" +
     "    \n" +
@@ -307,6 +310,42 @@ function init() {
     }
     p.evaluate(table);
     console.log(table);
+    generateReport(table);
+}
+
+function generateReport(table) {
+    if (table.longMethods.length > 0) {
+        console.log("You have some methods with more than 50 lines! Consider shortening them:");
+        for (let method of table.longMethods) {
+           console.log(method.name + " on line " + method.line + "\n");
+        }
+    }
+    if (table.commentMethods.length > 0) {
+        console.log("You have some methods with more than 5 lines of comments! Consider making your code speak for itself:");
+        for (let method of table.commentMethods) {
+            console.log(method.name + " on line " + method.line + "\n");
+        }
+    }
+    if (table.longChains.length > 0) {
+        console.log("You have some long message chains! That's when you chain a bunch of calls in a row. Consider splitting them up:");
+        for (let method of table.longChains) {
+            console.log("Line: " + method.start.line + ", Character: " + method.start.column + "\n");
+        }
+    }
+    let envy = [];
+    for (let item in table.defined) {
+        if (table.memberCalls[item]) {
+            if (table.memberCalls[item].length > 3) {
+                envy.push([item, table.memberCalls[item][0].start.line, table.memberCalls[item][0].start.column]);
+            }
+        }
+    }
+    if (envy.length > 0) {
+        console.log("You might have some feature envy. Consider moving some methods to reduce coupling.");
+        for (let item of envy) {
+            console.log(item[0] + " on Line: " + item[1] + ", Character: " + item[2] + "\n");
+        }
+    }
 }
 
 const PROGRAM = require('../ast/PROGRAM');
