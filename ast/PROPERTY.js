@@ -10,9 +10,9 @@ module.exports = class PROPERTY {
         } else {
             this.value = null;
         }
-        this.kind = node.kind();
-        this.method = node.method();
-        this.shorthand = node.shorthand();
+        this.kind = node.kind;
+        this.method = node.method;
+        this.shorthand = node.shorthand;
 
     }
 }
