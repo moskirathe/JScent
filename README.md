@@ -14,6 +14,7 @@ JScent is aimed at developers and teams who are trying to build code that is mai
 JScent is structured in a way that it is easily extensible to add new code smells in the future. Next steps for the team include adding more nuanced, difficult to spot smells to the analysis report.
 
 <b>Instructions</b>
+
 Put all the JS files you want to analyze in the /input folder, and run main.js to start.
 
 <b>Example code smells detectable by JScent</b>
@@ -29,11 +30,13 @@ Put all the JS files you want to analyze in the /input folder, and run main.js t
  
  
   
-<b> Detection Criteria</b></br>
+<b> Detection Criteria</b>
+
 <img src="https://demos.moseskirathe.com/jscent/images/detection-criteria.png" width="700" height="300">
  
 
 <b>Credit and References</b> 
+
 Initial program parsing done using the esprima node library (esprima.org)
 
 JSNose: Detecting JavaScript code smells <a href="https://www.ece.ubc.ca/~amesbah/docs/scam13.pdf">https://www.ece.ubc.ca/~amesbah/docs/scam13.pdf</a>
