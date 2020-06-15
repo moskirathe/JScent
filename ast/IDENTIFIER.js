@@ -1,7 +1,7 @@
 const EXPRESSION = require("./EXPRESSION");
 const STATEMENT = require("./STATEMENT");
 
-export default class IDENTIFIER {
+module.exports = class IDENTIFIER {
     parse(node) {
         this.name = node.name;
     }

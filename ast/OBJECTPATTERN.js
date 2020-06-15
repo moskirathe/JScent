@@ -1,4 +1,4 @@
-export default class OBJECTPATTERN{
+module.exports = class OBJECTPATTERN{
     parse(node){
         this.properties = [];
         for(let property of node.properties){

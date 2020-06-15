@@ -1,4 +1,4 @@
-export default class OBJECTEXPRESSION{
+module.exports = class OBJECTEXPRESSION{
     parse(node){
         this.properties = [];
         for(let property of node.properties){

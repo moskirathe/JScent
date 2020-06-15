@@ -8,7 +8,7 @@ const STATEMENT = require("./STATEMENT");
 //     alternate?: Statement;
 // }
 
-export default class IFSTATEMENT {
+module.exports = class IFSTATEMENT {
     parse(node) {
         this.test = new EXPRESSION();
         this.test.parse(node.test);

@@ -1,5 +1,5 @@
 const SWITCHCASE = require("./SWITCHCASE");
-export default class SWITCHSTATEMENT {
+module.exports = class SWITCHSTATEMENT {
     parse(node) {
         this.discriminant = new EXPRESSION();
         //this.discriminant.parse(node.discriminant);

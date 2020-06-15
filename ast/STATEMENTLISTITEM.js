@@ -1,7 +1,7 @@
 const DECLARATION = require("./DECLARATION");
 const STATEMENT = require("./STATEMENT");
 
-export default class STATEMENTLISTITEM {
+module.exports = class STATEMENTLISTITEM {
     parse(node) {
         if (node.type === "ClassDeclaration" || node.type === "FunctionDeclaration" || node.type === "VariableDeclaration") {
             this.item = new DECLARATION();

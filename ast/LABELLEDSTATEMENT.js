@@ -1,4 +1,4 @@
-export default class LABELLEDSTATEMENT{
+module.exports = class LABELLEDSTATEMENT{
     parse(node){
         this.label = new IDENTIFIER();
         this.label.parse(node.label);

@@ -1,7 +1,7 @@
 const IDENTIFIER = require("./IDENTIFIER");
 const BINDINGPATTERN = require("./BINDINGPATTERN");
 const EXPRESSION = require("./EXPRESSION");
-export default class VARIABLEDECLARATOR {
+module.exports = class VARIABLEDECLARATOR {
     parse(node) {
         if (node.id.type === "BlockStatement") {
             let temp = new IDENTIFIER ();

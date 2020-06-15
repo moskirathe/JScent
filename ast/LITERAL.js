@@ -1,4 +1,4 @@
-export default class LITERAL {
+module.exports = class LITERAL {
     parse(node){
         this.value = node.value;
         this.raw = node.raw;

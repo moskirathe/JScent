@@ -1,5 +1,5 @@
 const ARGUMENT = require("./ARGUMENT");
-export default class UNARYEXPRESSION {
+module.exports = class UNARYEXPRESSION {
     parse(node) {
         this.argument = new ARGUMENT();
         this.argument.parse(node.argument);

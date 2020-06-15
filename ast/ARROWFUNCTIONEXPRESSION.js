@@ -3,7 +3,7 @@ const FUNCTIONPARAMETER = require("./FUNCTIONPARAMETER");
 const BLOCKSTATEMENT = require("./BLOCKSTATEMENT");
 const EXPRESSION = require("./EXPRESSION");
 
-export default class ARROWFUNCTIONEXPRESSION {
+module.exports =  class ARROWFUNCTIONEXPRESSION {
     parse(node) {
         this.id = new IDENTIFIER();
         this.id.parse(node.id);

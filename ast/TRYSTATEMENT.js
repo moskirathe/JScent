@@ -1,6 +1,6 @@
 const CATCHCLAUSE = require("./CATCHCLAUSE");
 const BLOCKSTATEMENT = require("./BLOCKSTATEMENT");
-export default class TRYSTATEMENT {
+module.exports = class TRYSTATEMENT {
     parse(node) {
         this.block = new BLOCKSTATEMENT();
         this.block.parse(node.block);

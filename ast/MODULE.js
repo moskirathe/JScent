@@ -1,4 +1,4 @@
-export default class MODULE{
+module.exports = class MODULE{
     parse(node){
 
     }

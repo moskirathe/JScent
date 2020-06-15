@@ -1,5 +1,5 @@
 const VARIABLEDECLARATOR = require("./VARIABLEDECLARATOR");
-export default class VARIABLEDECLARATION {
+module.exports = class VARIABLEDECLARATION {
     parse(node) {
         this.declarations = [];
         for (let declarations of node.declarations) {

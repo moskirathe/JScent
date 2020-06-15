@@ -1,5 +1,5 @@
 const ARGUMENT = require("./ARGUMENT");
-export default class THROWSTATEMENT {
+module.exports = class THROWSTATEMENT {
     parse(node) {
         this.argument = new ARGUMENT();
         this.argument.parse(node.argument);

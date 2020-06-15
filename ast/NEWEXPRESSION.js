@@ -1,6 +1,6 @@
 import SPREADELEMENT from "./SPREADELEMENT";
 
-export default class NEWEXPRESSION{
+module.exports = class NEWEXPRESSION{
     parse(node){
         this.callee = new EXPRESSION();
         this.callee.parse(node.callee);

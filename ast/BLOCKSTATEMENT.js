@@ -1,6 +1,6 @@
 const STATEMENTLISTITEM = require("./EXPRESSION");
 
-export default class BLOCKSTATEMENT {
+module.exports = class BLOCKSTATEMENT {
     parse(node) {
         this.body = [];
         for (let item of node.body) {

@@ -1,4 +1,4 @@
-export default class METAPROPERTY{
+module.exports = class METAPROPERTY{
     parse(node){
         this.meta = new IDENTIFIER();
         this.meta.parse(node.meta);

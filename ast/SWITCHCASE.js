@@ -1,6 +1,6 @@
 const EXPRESSION = require("./EXPRESSION");
 
-export default class SWITCHCASE {
+module.exports = class SWITCHCASE {
     parse(node) {
         if (node.test !== null) {
             this.test = new EXPRESSION();

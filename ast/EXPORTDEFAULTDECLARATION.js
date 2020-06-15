@@ -9,7 +9,7 @@ const FUNCTIONDECLARATION = require("./FUNCTIONDECLARATION");
 //     declaration: Identifier | BindingPattern | ClassDeclaration | Expression | FunctionDeclaration;
 // }
 
-export default class EXPORTALLDECLARATION {
+module.exports = class EXPORTALLDECLARATION {
     parse(node) {
         if (node.declaration.type === "Identifier") {
             let temp = new IDENTIFIER();

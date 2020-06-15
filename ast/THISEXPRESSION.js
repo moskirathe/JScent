@@ -1,4 +1,4 @@
-export default class TEMPLATELITERAL {
+module.exports = class TEMPLATELITERAL {
     parse(node){
     }
 }

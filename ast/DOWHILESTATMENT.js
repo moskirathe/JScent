@@ -7,7 +7,7 @@ const EXPRESSION = require("./EXPRESSION");
 //     test: Expression;
 // }
 
-export default class DOWHILESTATMENT {
+module.exports = class DOWHILESTATMENT {
     parse(node) {
         let s = new STATEMENT();
         this.body = s;

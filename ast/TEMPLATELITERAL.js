@@ -1,7 +1,7 @@
 import TEMPLATEELEMENT from "./TEMPLATEELEMENT";
 const EXPRESSION = require("./EXPRESSION");
 
-export default class TEMPLATELITERAL {
+module.exports = class TEMPLATELITERAL {
     parse(node){
         this.quasis = [];
         for (let quasis of node.quasis) {

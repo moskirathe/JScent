@@ -1,4 +1,4 @@
-export default class METHODDEFINITION{
+module.exports = class METHODDEFINITION{
     parse(node){
         if(node.key != null){
             this.key = new EXPRESSION();

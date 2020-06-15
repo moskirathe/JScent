@@ -1,5 +1,5 @@
 const EXPRESSION = require("./EXPRESSION");
-export default class YIELDEXPRESSION {
+module.exports = class YIELDEXPRESSION {
     parse(node) {
         if (node.argument !== null) {
             this.argument = new EXPRESSION ();

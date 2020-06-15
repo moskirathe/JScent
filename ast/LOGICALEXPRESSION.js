@@ -1,4 +1,4 @@
-export default class LOGICALEXPRESSION{
+module.exports = class LOGICALEXPRESSION{
     parse(node){
         this.operator = node.operator;
         this.left = new EXPRESSION();

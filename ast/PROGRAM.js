@@ -5,7 +5,7 @@ import WHILESTATEMENT from "./WHILESTATEMENT";
 import WITHSTATEMENT from "./WITHSTATEMENT";
 import IMPORTDECLARATION from "./IMPORTDECLARATION";
 
-export default class PROGRAM{
+module.exports = class PROGRAM{
     parse(node){
         this.sourceType = node.sourceType;
         this.body = [];

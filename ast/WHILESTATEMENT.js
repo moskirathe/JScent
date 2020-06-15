@@ -1,6 +1,6 @@
 const EXPRESSION = require("./EXPRESSION");
 const STATEMENT = require("./STATEMENT");
-export default class WHILESTATEMENT {
+module.exports = class WHILESTATEMENT {
     parse(node) {
         this.test = new EXPRESSION();
         this.test.parse(node.test);

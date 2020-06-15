@@ -1,4 +1,4 @@
-export default class MEMBEREXPRESSION{
+module.exports = class MEMBEREXPRESSION{
     parse(node){
         this.computed = node.computed;
         this.object = new EXPRESSION();

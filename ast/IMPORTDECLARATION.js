@@ -1,4 +1,4 @@
-export default class IMPORTDECLARATION {
+module.exports = class IMPORTDECLARATION {
     parse(node){
         this.importspecifiers = [];
         for(let importspecifier of node.importspecifiers){

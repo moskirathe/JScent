@@ -10,7 +10,7 @@ const VARIABLEDECLARATION = require("./VARIABLEDECLARATION");
 //     body: Statement;
 // }
 
-export default class FORSTATEMENT {
+module.exports = class FORSTATEMENT {
     parse(node) {
         if (node.init.type === "Expression") {
             this.init = new EXPRESSION();

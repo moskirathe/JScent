@@ -1,4 +1,4 @@
-export default class IMPORTSPECIFIER {
+module.exports = class IMPORTSPECIFIER {
     parse(node){
         this.local = new IDENTIFIER();
         this.local.parse(node.local);

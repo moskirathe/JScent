@@ -1,5 +1,5 @@
 const ARGUMENT = require("./ARGUMENT");
-export default class SPREADELEMENT {
+module.exports = class SPREADELEMENT {
     parse(node) {
         this.argument = new ARGUMENT();
         this.argument.parse(node.argument);

@@ -9,7 +9,7 @@ const BLOCKSTATEMENT = require("./BLOCKSTATEMENT");
 //     body: BlockStatement; X
 // }
 
-export default class FUNCTIONEXPRESSION {
+module.exports = class FUNCTIONEXPRESSION {
     parse(node) {
         if (node.id !== null) {
             this.id = new IDENTIFIER();
