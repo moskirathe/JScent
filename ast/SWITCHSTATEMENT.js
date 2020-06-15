@@ -14,6 +14,9 @@ module.exports = class SWITCHSTATEMENT {
     }
     evaluate(table) {
         this.discriminant.evaluate(table);
+        if (this.cases.length > 3) {
+            table.switches.push(this.loc);
+        }
         for (let argument of this.cases) {
             argument.evaluate(table);
         }

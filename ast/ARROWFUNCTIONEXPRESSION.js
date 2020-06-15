@@ -27,6 +27,9 @@ module.exports =  class ARROWFUNCTIONEXPRESSION {
     }
 
     evaluate(table) {
+        if (this.params.length > 3) {
+            table.params.push(this.loc);
+        }
         for (let param of this.params) {
             param.evaluate(table);
         }

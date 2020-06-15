@@ -20,6 +20,8 @@ function init() {
             memberCalls: {},
             defined: {},
             used: {},
+            switches: [],
+            params: [],
             longChains: [],
             imports: {},
             longMethods: [],
@@ -50,6 +52,18 @@ function generateReport(table) {
         console.log("You have some long message chains! That's when you chain a bunch of calls in a row. Consider splitting them up:");
         for (let method of table.longChains) {
             console.log("Line: " + method.start.line + ", Character: " + method.start.column + "\n");
+        }
+    }
+    if (table.params.length > 0) {
+        console.log("You have some long parameter lists! Consider joining them into an object:");
+        for (let param of table.params) {
+            console.log("Line: " + param.start.line + ", Character: " + param.start.column + "\n");
+        }
+    }
+    if (table.switches.length > 0) {
+        console.log("You have some switch statements with many cases. Consider splitting them up into smaller bits:");
+        for (let swtch of table.switches) {
+            console.log("Line: " + swtch.start.line + ", Character: " + swtch.start.column + "\n");
         }
     }
     let envy = [];
