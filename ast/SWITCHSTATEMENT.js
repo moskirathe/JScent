@@ -2,6 +2,7 @@
 module.exports = class SWITCHSTATEMENT {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         this.discriminant = new EXPRESSION();
         this.discriminant.parse(node.discriminant);
         this.cases = [];
@@ -9,6 +10,13 @@ module.exports = class SWITCHSTATEMENT {
             let temp = new SWITCHCASE();
             this.cases.push(temp);
             temp.parse(cases);
+        }
+    }
+    evaluate(table) {
+        this.loc.evaluate(table);
+        this.discriminant.evaluate(table);
+        for (let argument of this.cases) {
+            argument.evaluate(table);
         }
     }
 }

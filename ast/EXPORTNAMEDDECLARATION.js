@@ -9,6 +9,7 @@
 module.exports = class EXPORTALLDECLARATION {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         this.source = new LITERAL();
         this.source.parse(node.source);
         this.specifiers = [];
@@ -32,6 +33,13 @@ module.exports = class EXPORTALLDECLARATION {
             this.declaration = temp;
             temp.parse(node.declaration);
         }
+    }
+    evaluate(table) {
+        this.source.evaluate(table);
+        for (let argument of this.specifiers) {
+            argument.evaluate(table);
+        }
+        this.declaration.evaluate(table);
     }
 }
 

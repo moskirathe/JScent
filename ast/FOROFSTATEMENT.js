@@ -9,6 +9,7 @@
 module.exports = class FOROFSTATEMENT {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         this.left = new EXPRESSION();
         this.left.parse(node.left);
 
@@ -18,6 +19,12 @@ module.exports = class FOROFSTATEMENT {
         this.body = new STATEMENT();
         this.body.parse(node.body);
     }
+    evaluate(table) {
+        this.left.evaluate(table);
+        this.right.evaluate(table);
+        this.body.evaluate(table);
+    }
+
 }
 
 const EXPRESSION = require("./EXPRESSION");

@@ -2,6 +2,7 @@
 module.exports = class METHODDEFINITION{
     parse(node){
         this.loc = node.loc;
+        this.comments = node.comments;
         if(node.key != null){
             this.key = new EXPRESSION();
             this.key.parse(node.key);
@@ -17,6 +18,13 @@ module.exports = class METHODDEFINITION{
         }
         this.kind = node.kind;
         this.static = node.static;
+    }
+    evaluate(table) {
+        this.key.evaluate(table);
+        this.computed.evaluate(table);
+        this.value.evaluate(table);
+        this.kind.evaluate(table);
+        this.static.evaluate(table);
     }
 }
 

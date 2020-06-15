@@ -2,6 +2,7 @@
 module.exports = class CALLEXPRESSION {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         this.callee = new EXPRESSION();
         this.callee.parse(node.callee);
         this.arguments = [];

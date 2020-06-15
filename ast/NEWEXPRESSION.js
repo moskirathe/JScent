@@ -2,6 +2,7 @@
 module.exports = class NEWEXPRESSION{
     parse(node){
         this.loc = node.loc;
+        this.comments = node.comments;
         this.callee = new EXPRESSION();
         this.callee.parse(node.callee);
         this.arguments = [];
@@ -14,6 +15,12 @@ module.exports = class NEWEXPRESSION{
             }
             this.arguments.push(temp);
             temp.parse(arg);
+        }
+    }
+    evaluate(table) {
+        this.callee.evaluate(table);
+        for (let argument of this.arguments) {
+            argument.evaluate(table);
         }
     }
 }

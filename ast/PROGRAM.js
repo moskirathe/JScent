@@ -1,6 +1,7 @@
 class PROGRAM{
     parse(node){
         this.loc = node.loc;
+        this.comments = node.comments;
         this.sourceType = node.sourceType;
         this.body = [];
         if(this.sourceType === 'script'){
@@ -15,6 +16,12 @@ class PROGRAM{
                 this.body.push(temp);
                 temp.parse(item);
             }
+        }
+    }
+    evaluate(table) {
+        this.sourceType.evaluate(table);
+        for (let argument of this.body) {
+            argument.evaluate(table);
         }
     }
 }

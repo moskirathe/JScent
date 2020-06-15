@@ -10,6 +10,7 @@
 module.exports = class FORSTATEMENT {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         if (node.init === null) {
              this.init = null;
         } else if (node.init.type === "VariableDeclaration") {
@@ -33,6 +34,12 @@ module.exports = class FORSTATEMENT {
         }
         this.body = new STATEMENT();
         this.body.parse(node.body);
+    }
+    evaluate(table) {
+        this.init.evaluate(table);
+        this.test.evaluate(table);
+        this.update.evaluate(table);
+        this.body.evaluate(table);
     }
 }
 

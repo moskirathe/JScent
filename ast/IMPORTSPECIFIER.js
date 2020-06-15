@@ -2,6 +2,7 @@
 module.exports = class IMPORTSPECIFIER {
     parse(node){
         this.loc = node.loc;
+        this.comments = node.comments;
         this.local = new IDENTIFIER();
         this.local.parse(node.local);
 
@@ -9,6 +10,10 @@ module.exports = class IMPORTSPECIFIER {
             this.imported = new IDENTIFIER();
             this.imported.parse(this.imported);
         }
+    }
+    evaluate(table) {
+        this.local.evaluate(table);
+        this.imported.evaluate(table);
     }
 }
 

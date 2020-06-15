@@ -2,6 +2,7 @@
 module.exports = class MODULEITEM {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         if (node.type === "ImportDeclaration") {
             this.type = new IMPORTDECLARATION();
             this.type.parse(node);

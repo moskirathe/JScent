@@ -2,6 +2,7 @@
 module.exports = class ARRAYPATTERN {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         let elements = [];
         for (let element of node.elements) {
             if (element === null) {

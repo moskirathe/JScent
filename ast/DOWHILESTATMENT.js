@@ -8,6 +8,7 @@
 module.exports = class DOWHILESTATMENT {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         let s = new STATEMENT();
         this.body = s;
         s.parse(node.body);
@@ -15,6 +16,10 @@ module.exports = class DOWHILESTATMENT {
         let e = new EXPRESSION();
         this.test = e;
         e.parse(node.test);
+    }
+    evaluate(table) {
+        this.body.evaluate(table);
+        this.test.evaluate(table);
     }
 }
 

@@ -2,6 +2,7 @@
 module.exports = class SWITCHCASE {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         if (node["test"] !== null) {
             this.test = new EXPRESSION();
             this.test.parse(node["test"]);
@@ -13,6 +14,13 @@ module.exports = class SWITCHCASE {
             let temp = new STATEMENT();
             this.consequent.push(temp);
             temp.parse(consequent);
+        }
+    }
+    evaluate(table) {
+        this.loc.evaluate(table);
+        this.test.evaluate(table);
+        for (let argument of this.consequent) {
+            argument.evaluate(table);
         }
     }
 }

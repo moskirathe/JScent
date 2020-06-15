@@ -6,6 +6,7 @@
 module.exports = class EXPORTDEFAULTDECLARATION {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         if (node.declaration.type === "Identifier") {
             let temp = new IDENTIFIER();
             this.declaration = temp;
@@ -27,6 +28,9 @@ module.exports = class EXPORTDEFAULTDECLARATION {
             this.declaration = temp;
             temp.parse(node.declaration);
         }
+    }
+    evaluate(table) {
+        this.declaration.evaluate(table);
     }
 }
 
