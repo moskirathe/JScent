@@ -9,6 +9,7 @@ const user = require('./routes/api/user');
 const bodyParser = require('body-parser');
 const server = express();
 const Stock = require('./models/Stock');
+const notUsingThis = require('./models/Stock');
 connectDB();
 
 server.use(cors({ origin: true, credentials: true }));
@@ -256,7 +257,7 @@ function convertToNum(text) {
 
 
 
-
+    let unused;
 
     }
     return text;
