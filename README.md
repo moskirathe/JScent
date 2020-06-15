@@ -3,7 +3,7 @@
 <b>Video:</b>
 https://youtu.be/_FAUq98qELY
 
-JScent is a program analyzer that detects code smells. Code smells are potential issues with source code that can correspond to a deeper problem in the program. For example, JScent can detect issues such as long methods, too many comments, feature envy, message chains, dead code and more. JScent produces a report that summarizes all the code smells found in a concise and usable way - easily accessible in the console.
+JScent is a program analyzer that detects code smells. Code smells are potential issues with source code that can correspond to a deeper problem in the program. For example, JScent can detect issues such as long methods, too many comments, feature envy, message chains, dead code and more. JScent produces a report that summarizes all the code smells found in a concise and usable way - easily accessible in the console. The JScent analysis can be classified both as a value-agnostic static analysis and a meta-properties analysis, as some code smells lean more toward syntax and others more toward semantics and high-level Software Engineering principles.
 
 <b>Sample Report:</b>
 

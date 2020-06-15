@@ -12,6 +12,11 @@ module.exports = class CLASSBODY {
     }
 
     evaluate(table) {
+        let start = this.loc.start.line;
+        let end = this.loc.end.line;
+        if (this.body.length > 20 || end - start > 250) {
+            table.largeClasses.push(this.loc);
+        }
         for (let item of this.body) {
             item.evaluate(table);
         }

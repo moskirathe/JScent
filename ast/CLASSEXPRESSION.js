@@ -20,7 +20,9 @@ module.exports = class CLASSEXPRESSION {
     }
     evaluate(table) {
         this.id.evaluate(table);
-        this.superClass.evaluate(table);
+        if (this.superClass) {
+            this.superClass.evaluate(table);
+        }
         this.body.evaluate(table);
     }
 }

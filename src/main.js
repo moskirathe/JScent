@@ -20,6 +20,7 @@ function init() {
             memberCalls: {},
             defined: {},
             used: {},
+            largeClasses: [],
             switches: [],
             params: [],
             longChains: [],
@@ -58,6 +59,12 @@ function generateReport(table) {
         console.log("You have some long parameter lists! Consider joining them into an object:");
         for (let param of table.params) {
             console.log("Line: " + param.start.line + ", Character: " + param.start.column + "\n");
+        }
+    }
+    if (table.largeClasses.length > 0) {
+        console.log("Your class might just be doing too much. Consider reducing the number of lines or methods:");
+        for (let cls of table.largeClasses) {
+            console.log("Line: " + cls.start.line + ", Character: " + cls.start.column + "\n");
         }
     }
     if (table.switches.length > 0) {
