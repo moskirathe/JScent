@@ -28,4 +28,10 @@ module.exports = class ARRAYPATTERN {
             }
         }
     }
+
+    evaluate(table) {
+        for (let elem of this.elements) {
+            elem.evaluate(table);
+        }
+    }
 }

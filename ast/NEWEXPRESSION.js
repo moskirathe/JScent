@@ -7,7 +7,7 @@ export default class NEWEXPRESSION{
         this.arguments = [];
         for(let arg of node.arguments){
             let temp = null;
-            if(arg.type == 'SpreadElement'){
+            if(arg.type === 'SpreadElement'){
                 temp = new SPREADELEMENT();
             } else {
                 temp = new EXPRESSION();
