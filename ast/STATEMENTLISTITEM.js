@@ -10,6 +10,10 @@ class STATEMENTLISTITEM {
             this.item.parse(node);
         }
     }
+    evaluate(table) {
+        this.loc.evaluate(table);
+        this.item.evaluate(table);
+    }
 }
 
 module.exports = STATEMENTLISTITEM;

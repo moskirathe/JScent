@@ -7,6 +7,11 @@ module.exports = class WITHSTATEMENT {
         this.body = new STATEMENT();
         this.body.parse(node.body);
     }
+    evaluate(table) {
+        this.loc.evaluate(table);
+        this.object.evaluate(table);
+        this.body.evaluate(table);
+    }
 }
 
 const EXPRESSION = require("./EXPRESSION");

@@ -15,6 +15,13 @@ module.exports = class SWITCHCASE {
             temp.parse(consequent);
         }
     }
+    evaluate(table) {
+        this.loc.evaluate(table);
+        this.test.evaluate(table);
+        for (let argument of this.consequent) {
+            argument.evaluate(table);
+        }
+    }
 }
 
 const EXPRESSION = require("./EXPRESSION");

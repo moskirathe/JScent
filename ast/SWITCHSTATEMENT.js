@@ -11,6 +11,13 @@ module.exports = class SWITCHSTATEMENT {
             temp.parse(cases);
         }
     }
+    evaluate(table) {
+        this.loc.evaluate(table);
+        this.discriminant.evaluate(table);
+        for (let argument of this.cases) {
+            argument.evaluate(table);
+        }
+    }
 }
 
 const SWITCHCASE = require("./SWITCHCASE");
