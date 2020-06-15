@@ -26,7 +26,7 @@ module.exports = class VARIABLEDECLARATOR {
         if (this.init) {
             init = this.init.evaluate(table);
         }
-        table.defined[id] = init;
+        table.defined[id] = this.loc;
     }
 }
 

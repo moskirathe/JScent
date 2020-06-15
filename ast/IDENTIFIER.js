@@ -5,6 +5,11 @@ module.exports = class IDENTIFIER {
         this.name = node.name;
     }
     evaluate(table) {
+        if (this.name in table.used) {
+            table.used[this.name]++;
+        } else {
+            table.used[this.name] = 1;
+        }
         return this.name;
     }
 }

@@ -12,8 +12,9 @@ module.exports = class IMPORTSPECIFIER {
         }
     }
     evaluate(table) {
-        this.local.evaluate(table);
-        this.imported.evaluate(table);
+        let local = this.local.evaluate(table);
+        let imported = this.imported.evaluate(table);
+        table.imports[local] = this.loc;
     }
 }
 

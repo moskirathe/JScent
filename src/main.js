@@ -292,6 +292,7 @@ const program = "const express = require('express');\n" +
     "    \n" +
     "    \n" +
     "    \n" +
+    "    let unused\n" +
     "    return result;\n" +
     "}"
 
@@ -304,7 +305,9 @@ function init() {
         comments: comments,
         memberCalls: {},
         defined: {},
+        used: {},
         longChains: [],
+        imports: {},
         longMethods: [],
         commentMethods: []
     }
@@ -340,9 +343,28 @@ function generateReport(table) {
             }
         }
     }
+    for (let item in table.imports) {
+        if (table.memberCalls[item]) {
+            if (table.memberCalls[item].length > 3) {
+                envy.push([item, table.memberCalls[item][0].start.line, table.memberCalls[item][0].start.column]);
+            }
+        }
+    }
     if (envy.length > 0) {
         console.log("You might have some feature envy. Consider moving some methods to reduce coupling.");
         for (let item of envy) {
+            console.log(item[0] + " on Line: " + item[1] + ", Character: " + item[2] + "\n");
+        }
+    }
+    let deadCode = [];
+    for (let item in table.defined) {
+        if (table.used[item] === 1) {
+            deadCode.push([item, table.defined[item].start.line, table.defined[item].start.column]);
+        }
+    }
+    if (deadCode.length > 0) {
+        console.log("You might have some dead code. Consider making sure you have no unused variables.");
+        for (let item of deadCode) {
             console.log(item[0] + " on Line: " + item[1] + ", Character: " + item[2] + "\n");
         }
     }
