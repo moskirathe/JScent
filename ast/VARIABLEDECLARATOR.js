@@ -3,8 +3,8 @@ const BINDINGPATTERN = require("./BINDINGPATTERN");
 const EXPRESSION = require("./EXPRESSION");
 module.exports = class VARIABLEDECLARATOR {
     parse(node) {
-        if (node.id.type === "BlockStatement") {
-            let temp = new IDENTIFIER ();
+        if (node.id.type === "Identifier") {
+            let temp = new IDENTIFIER();
             this.id = temp;
             temp.parse(node.id);
         } else {

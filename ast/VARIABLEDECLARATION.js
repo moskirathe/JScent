@@ -4,8 +4,9 @@ module.exports = class VARIABLEDECLARATION {
         this.declarations = [];
         for (let declarations of node.declarations) {
             let temp = new VARIABLEDECLARATOR();
-            this.consequent.push(temp);
+            this.declarations.push(temp);
             temp.parse(declarations);
         }
+        this.kind = node.kind;
     }
 }
