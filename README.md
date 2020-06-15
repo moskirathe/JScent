@@ -24,6 +24,7 @@ Put all the JS files you want to analyze in the /input folder, and run main.js t
   <li>Long parameter list - A method with more than 3 parameters</li>
   <li>Large objects - A class/object that is doing too much</li>
   <li>Dead code - A variable, parameter, field, method or class is no longer used (usually because it is obsolete).</li>
+  <li>Long Methods - A method contains too many lines of code</li>
   <li>Switch statement - A switch statement with too many cases </li>
   <li>Method comments - A method is filled with explanatory comments</li>
  </ul>
