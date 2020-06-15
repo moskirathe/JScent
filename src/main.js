@@ -1,6 +1,7 @@
 const esprima = require('esprima');
 const fs = require('fs');
 
+//files parsed into inital AST using esprima node library (esprima.org)
 function init() {
     let files = fs.readdirSync("../input/");
     let programs = [];
