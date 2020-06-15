@@ -1,3 +1,5 @@
+import EXPRESSION from "./EXPRESSION";
+
 export default class RETURNSTATEMENT{
     parse(node){
         this.argument = null;

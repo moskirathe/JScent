@@ -6,6 +6,8 @@ export default class PROPERTY {
         if(node.value != null) {
             this.value = new EXPRESSION();
             this.value.parse(node.value);
+        } else {
+            this.value = null;
         }
         this.kind = node.kind();
         this.method = node.method();

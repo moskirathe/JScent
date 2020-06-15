@@ -1,9 +1,11 @@
+import EXPRESSION from "./EXPRESSION";
+
 export default class SEQUENCEEXPRESSION{
     parse(node){
-        this.arguments = [];
+        this.expressions = [];
         for(let expression of node.expressions){
             let temp = new EXPRESSION();
-            this.arguments.push(temp);
+            this.expressions.push(temp);
             temp.parse(expression);
         }
     }

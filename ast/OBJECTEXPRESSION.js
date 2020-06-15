@@ -1,3 +1,5 @@
+const PROPERTY = require("./PROPERTY");
+
 module.exports = class OBJECTEXPRESSION{
     parse(node){
         this.properties = [];

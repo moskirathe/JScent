@@ -1,3 +1,5 @@
+const EXPRESSION = require("./EXPRESSION");
+
 module.exports = class MEMBEREXPRESSION{
     parse(node){
         this.computed = node.computed;

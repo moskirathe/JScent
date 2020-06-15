@@ -1,3 +1,5 @@
+const PROPERTY = require("./PROPERTY");
+
 module.exports = class OBJECTPATTERN{
     parse(node){
         this.properties = [];

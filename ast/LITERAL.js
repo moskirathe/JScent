@@ -1,3 +1,5 @@
+const REGEX = require("./REGEX");
+
 module.exports = class LITERAL {
     parse(node){
         this.value = node.value;

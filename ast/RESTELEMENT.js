@@ -1,5 +1,5 @@
 import IDENTIFIER from "./IDENTIFIER";
-import OBJECTPATTERN from "./OBJECTPATTERN";
+import BINDINGPATTERN from "./BINDINGPATTERN";
 
 export default class RESTELEMENT{
     parse(node){
@@ -8,11 +8,7 @@ export default class RESTELEMENT{
             this.argument = new IDENTIFIER();
             this.argument.parse(node.argument);
         } else {
-            if(node.argument.type === 'ArrayPattern'){
-                this.argument = new ARRAYPATTERN();
-                } else {
-                this.argument = new OBJECTPATTERN();
-            }
+            this.argument = new BINDINGPATTERN();
             this.argument.parse(node.argument);
         }
     }
