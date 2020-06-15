@@ -1,6 +1,7 @@
 
 module.exports = class CONDITIONALEXPRESSION {
     parse(node) {
+        this.loc = node.loc;
         this.test = new EXPRESSION();
         this.test.parse(node["test"]);
         this.consequent = new EXPRESSION();

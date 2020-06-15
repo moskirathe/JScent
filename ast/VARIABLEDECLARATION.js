@@ -1,6 +1,7 @@
 
 module.exports = class VARIABLEDECLARATION {
     parse(node) {
+        this.loc = node.loc;
         this.declarations = [];
         for (let declarations of node.declarations) {
             let temp = new VARIABLEDECLARATOR();

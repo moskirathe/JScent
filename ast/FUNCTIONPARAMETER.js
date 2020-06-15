@@ -1,6 +1,7 @@
 
 module.exports = class FUNCTIONPARAMETER {
     parse(node) {
+        this.loc = node.loc;
         if (node.type === "AssignmentPattern") {
             this.type = new ASSIGNMENTPATTERN();
             this.type.parse(node);

@@ -1,6 +1,7 @@
 
 module.exports = class SEQUENCEEXPRESSION{
     parse(node){
+        this.loc = node.loc;
         this.expressions = [];
         for(let expression of node.expressions){
             let temp = new EXPRESSION();

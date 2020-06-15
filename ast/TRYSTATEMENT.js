@@ -1,6 +1,7 @@
 
 module.exports = class TRYSTATEMENT {
     parse(node) {
+        this.loc = node.loc;
         this.block = new BLOCKSTATEMENT();
         this.block.parse(node.block);
         if (node.handler !== null) {

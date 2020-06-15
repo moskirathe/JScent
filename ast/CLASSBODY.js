@@ -1,6 +1,7 @@
 
 module.exports = class CLASSBODY {
     parse(node) {
+        this.loc = node.loc;
         this.body = [];
         for (let method of node.body) {
             let temp = new METHODDEFINITION();

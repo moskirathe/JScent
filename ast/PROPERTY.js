@@ -1,6 +1,7 @@
 
 module.exports = class PROPERTY {
     parse(node) {
+        this.loc = node.loc;
         this.key = new EXPRESSION();
         this.key.parse(node.key);
         this.computed = node.computed;

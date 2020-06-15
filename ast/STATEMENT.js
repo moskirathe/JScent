@@ -9,6 +9,7 @@
 
 module.exports = class STATEMENT {
     parse(node) {
+        this.loc = node.loc;
         switch(node.type) {
             case ("BlockStatement"):
                 this.type = new BLOCKSTATEMENT();

@@ -1,6 +1,7 @@
 
 module.exports = class SWITCHSTATEMENT {
     parse(node) {
+        this.loc = node.loc;
         this.discriminant = new EXPRESSION();
         this.discriminant.parse(node.discriminant);
         this.cases = [];

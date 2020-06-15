@@ -8,6 +8,7 @@
 
 module.exports = class FUNCTIONEXPRESSION {
     parse(node) {
+        this.loc = node.loc;
         if (node.id !== null) {
             this.id = new IDENTIFIER();
             this.id.parse(node.id);

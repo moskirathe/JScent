@@ -1,6 +1,7 @@
 
 module.exports = class LABELLEDSTATEMENT{
     parse(node){
+        this.loc = node.loc;
         this.label = new IDENTIFIER();
         this.label.parse(node.label);
 
