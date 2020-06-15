@@ -13,6 +13,7 @@ module.exports = class RESTELEMENT{
         }
     }
     evaluate(table) {
+        this.loc.evaluate(table);
         this.argument.evaluate(table);
     }
 }

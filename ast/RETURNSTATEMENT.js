@@ -9,6 +9,10 @@ module.exports = class RETURNSTATEMENT{
             this.argument.parse(node.argument);
         }
     }
+    evaluate(table) {
+        this.loc.evaluate(table);
+        this.argument.evaluate(table);
+    }
 }
 
 const EXPRESSION = require("./EXPRESSION");

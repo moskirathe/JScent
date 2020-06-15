@@ -10,6 +10,12 @@ module.exports = class SEQUENCEEXPRESSION{
             temp.parse(expression);
         }
     }
+    evaluate(table) {
+        this.loc.evaluate(table);
+        for (let argument of this.expressions) {
+            argument.evaluate(table);
+        }
+    }
 }
 
 const EXPRESSION = require ("./EXPRESSION");

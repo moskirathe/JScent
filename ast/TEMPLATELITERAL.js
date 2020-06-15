@@ -16,6 +16,15 @@ module.exports = class TEMPLATELITERAL {
             temp.parse(expression);
         }
     }
+    evaluate(table) {
+        this.loc.evaluate(table);
+        for (let argument of this.quasis) {
+            argument.evaluate(table);
+        }
+        for (let argument of this.expressions) {
+            argument.evaluate(table);
+        }
+    }
 }
 
 const TEMPLATEELEMENT = require ("./TEMPLATEELEMENT");

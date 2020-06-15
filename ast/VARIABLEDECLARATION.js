@@ -11,6 +11,12 @@ module.exports = class VARIABLEDECLARATION {
         }
         this.kind = node.kind;
     }
+    evaluate(table) {
+        this.loc.evaluate(table);
+        for (let argument of this.declarations) {
+            argument.evaluate(table);
+        }
+    }
 }
 
 const VARIABLEDECLARATOR = require("./VARIABLEDECLARATOR");

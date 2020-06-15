@@ -10,6 +10,10 @@ module.exports = class YIELDEXPRESSION {
             this.argument = null;
         }
     }
+    evaluate(table) {
+        this.loc.evaluate(table);
+        this.argument.evaluate(table);
+    }
 }
 
 const EXPRESSION = require("./EXPRESSION");

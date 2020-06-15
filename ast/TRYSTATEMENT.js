@@ -18,6 +18,12 @@ module.exports = class TRYSTATEMENT {
             this.finalizer = null;
         }
     }
+    evaluate(table) {
+        this.loc.evaluate(table);
+        this.block.evaluate(table);
+        this.handler.evaluate(table);
+        this.finalizer.evaluate(table);
+    }
 }
 
 const CATCHCLAUSE = require("./CATCHCLAUSE");
