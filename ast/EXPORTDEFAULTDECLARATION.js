@@ -1,9 +1,3 @@
-const IDENTIFIER = require("./IDENTIFIER");
-const BINDINGPATTERN = require("./BINDINGPATTERN");
-const CLASSDECLARATION = require("./CLASSDECLARATION");
-const EXPRESSION = require("./EXPRESSION");
-const FUNCTIONDECLARATION = require("./FUNCTIONDECLARATION");
-
 // interface ExportDefaultDeclaration {
 //     type: 'ExportDefaultDeclaration';
 //     declaration: Identifier | BindingPattern | ClassDeclaration | Expression | FunctionDeclaration;
@@ -34,3 +28,9 @@ module.exports = class EXPORTDEFAULTDECLARATION {
         }
     }
 }
+
+const IDENTIFIER = require("./IDENTIFIER");
+const BINDINGPATTERN = require("./BINDINGPATTERN");
+const CLASSDECLARATION = require("./CLASSDECLARATION");
+const EXPRESSION = require("./EXPRESSION");
+const FUNCTIONDECLARATION = require("./FUNCTIONDECLARATION");

@@ -1,5 +1,3 @@
-const EXPRESSION = require("./EXPRESSION");
-const STATEMENT = require("./STATEMENT");
 
 // interface IfStatement {
 //     type: 'IfStatement';
@@ -24,3 +22,6 @@ module.exports = class IFSTATEMENT {
 
 
 }
+
+const EXPRESSION = require("./EXPRESSION");
+const STATEMENT = require("./STATEMENT");

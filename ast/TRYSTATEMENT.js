@@ -1,5 +1,3 @@
-const CATCHCLAUSE = require("./CATCHCLAUSE");
-const BLOCKSTATEMENT = require("./BLOCKSTATEMENT");
 
 module.exports = class TRYSTATEMENT {
     parse(node) {
@@ -19,3 +17,6 @@ module.exports = class TRYSTATEMENT {
         }
     }
 }
+
+const CATCHCLAUSE = require("./CATCHCLAUSE");
+const BLOCKSTATEMENT = require("./BLOCKSTATEMENT");

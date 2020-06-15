@@ -1,4 +1,3 @@
-const REGEX = require("./REGEX");
 
 module.exports = class LITERAL {
     parse(node){
@@ -11,3 +10,5 @@ module.exports = class LITERAL {
         }
     }
 }
+
+const REGEX = require("./REGEX");

@@ -1,5 +1,3 @@
-const EXPRESSION = require("./EXPRESSION");
-const STATEMENT = require("./STATEMENT");
 
 // interface ForInStatement {
 //     type: 'ForInStatement';
@@ -21,3 +19,6 @@ module.exports = class FORINSTATEMENT {
         this.body.parse(node.body);
     }
 }
+
+const EXPRESSION = require("./EXPRESSION");
+const STATEMENT = require("./STATEMENT");

@@ -1,5 +1,3 @@
-const STATEMENTLISTITEM = require("./EXPRESSION");
-
 module.exports = class BLOCKSTATEMENT {
     parse(node) {
         this.body = [];
@@ -9,4 +7,12 @@ module.exports = class BLOCKSTATEMENT {
             temp.parse(item);
         }
     }
+
+    evaluate(table) {
+        for (let item of this.body) {
+            item.evaluate(table);
+        }
+    }
 }
+
+const STATEMENTLISTITEM = require("./STATEMENTLISTITEM");

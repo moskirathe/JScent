@@ -1,5 +1,3 @@
-const IDENTIFIER = require("./IDENTIFIER");
-const CLASSBODY = require("./CLASSBODY");
 
 module.exports = class CLASSDECLARATION {
     parse(node) {
@@ -19,3 +17,6 @@ module.exports = class CLASSDECLARATION {
         this.body.parse(node.body);
     }
 }
+
+const IDENTIFIER = require("./IDENTIFIER");
+const CLASSBODY = require("./CLASSBODY");

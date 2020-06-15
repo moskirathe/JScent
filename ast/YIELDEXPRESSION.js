@@ -1,4 +1,4 @@
-const EXPRESSION = require("./EXPRESSION");
+
 module.exports = class YIELDEXPRESSION {
     parse(node) {
         if (node.argument !== null) {
@@ -9,3 +9,5 @@ module.exports = class YIELDEXPRESSION {
         }
     }
 }
+
+const EXPRESSION = require("./EXPRESSION");

@@ -1,5 +1,4 @@
-const EXPRESSION = require("./EXPRESSION");
-const TEMPLATELITERAL = require("./TEMPLATELITERAL");
+
 module.exports = class TAGGEDTEMPLATEEXPRESSION {
     parse(node) {
         this.readonlytag = new EXPRESSION();
@@ -8,3 +7,6 @@ module.exports = class TAGGEDTEMPLATEEXPRESSION {
         this.readonlyquasi.parse(node["readonly quasi"]);
     }
 }
+
+const EXPRESSION = require("./EXPRESSION");
+const TEMPLATELITERAL = require("./TEMPLATELITERAL");

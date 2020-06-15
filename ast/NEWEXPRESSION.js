@@ -1,5 +1,3 @@
-const SPREADELEMENT = require("./SPREADELEMENT");
-const EXPRESSION = require("./EXPRESSION");
 
 module.exports = class NEWEXPRESSION{
     parse(node){
@@ -18,3 +16,6 @@ module.exports = class NEWEXPRESSION{
         }
     }
 }
+
+const SPREADELEMENT = require("./SPREADELEMENT");
+const EXPRESSION = require("./EXPRESSION");

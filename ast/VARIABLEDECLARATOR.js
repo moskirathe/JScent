@@ -1,6 +1,4 @@
-const IDENTIFIER = require("./IDENTIFIER");
-const BINDINGPATTERN = require("./BINDINGPATTERN");
-const EXPRESSION = require("./EXPRESSION");
+
 module.exports = class VARIABLEDECLARATOR {
     parse(node) {
         if (node.id.type === "Identifier") {
@@ -19,4 +17,14 @@ module.exports = class VARIABLEDECLARATOR {
             this.init = null;
         }
     }
+
+    evaluate(table) {
+        let id = this.id.evaluate(table);
+        let init = this.init.evaluate(table);
+        table.defined[id] = init;
+    }
 }
+
+const IDENTIFIER = require("./IDENTIFIER");
+const BINDINGPATTERN = require("./BINDINGPATTERN");
+const EXPRESSION = require("./EXPRESSION");

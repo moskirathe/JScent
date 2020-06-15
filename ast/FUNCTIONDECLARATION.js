@@ -1,7 +1,3 @@
-const IDENTIFIER = require("./IDENTIFIER");
-const FUNCTIONPARAMETER = require("./FUNCTIONPARAMETER");
-const BLOCKSTATEMENT = require("./BLOCKSTATEMENT");
-
 // interface FunctionDeclaration {
 //     type: 'FunctionDeclaration';
 //     id: Identifier | null; X
@@ -28,3 +24,7 @@ module.exports = class FUNCTIONDECLARATION {
         temp.parse(node.body);
     }
 }
+
+const IDENTIFIER = require("./IDENTIFIER");
+const FUNCTIONPARAMETER = require("./FUNCTIONPARAMETER");
+const BLOCKSTATEMENT = require("./BLOCKSTATEMENT");

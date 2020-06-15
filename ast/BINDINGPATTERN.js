@@ -1,5 +1,3 @@
-const ARRAYPATTERN = require("./ARRAYPATTERN");
-const OBJECTPATTERN = require("./OBJECTPATTERN");
 
 module.exports = class BINDINGPATTERN {
     parse(node) {
@@ -11,4 +9,11 @@ module.exports = class BINDINGPATTERN {
             this.pattern.parse(node);
         }
     }
+
+    evaluate(table) {
+        this.pattern.evaluate(table);
+    }
 }
+
+const ARRAYPATTERN = require("./ARRAYPATTERN");
+const OBJECTPATTERN = require("./OBJECTPATTERN");

@@ -1,6 +1,3 @@
-const IDENTIFIER = require("./IDENTIFIER");
-const BINDINGPATTERN = require("./BINDINGPATTERN");
-const EXPRESSION = require("./EXPRESSION");
 
 module.exports = class ASSIGNMENTPATTERN {
     parse(node) {
@@ -14,4 +11,13 @@ module.exports = class ASSIGNMENTPATTERN {
         this.right = new EXPRESSION();
         this.right.parse(node.right);
     }
+
+    evaluate(table) {
+        this.left.evaluate(table);
+        this.right.evaluate(table);
+    }
 }
+
+const IDENTIFIER = require("./IDENTIFIER");
+const BINDINGPATTERN = require("./BINDINGPATTERN");
+const EXPRESSION = require("./EXPRESSION");

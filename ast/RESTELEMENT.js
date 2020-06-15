@@ -1,5 +1,3 @@
-const IDENTIFIER = require("./IDENTIFIER");
-const BINDINGPATTERN = require ("./BINDINGPATTERN");
 
 module.exports = class RESTELEMENT{
     parse(node){
@@ -13,3 +11,6 @@ module.exports = class RESTELEMENT{
         }
     }
 }
+
+const IDENTIFIER = require("./IDENTIFIER");
+const BINDINGPATTERN = require ("./BINDINGPATTERN");

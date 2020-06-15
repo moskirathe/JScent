@@ -1,4 +1,4 @@
-const VARIABLEDECLARATOR = require("./VARIABLEDECLARATOR");
+
 module.exports = class VARIABLEDECLARATION {
     parse(node) {
         this.declarations = [];
@@ -10,3 +10,5 @@ module.exports = class VARIABLEDECLARATION {
         this.kind = node.kind;
     }
 }
+
+const VARIABLEDECLARATOR = require("./VARIABLEDECLARATOR");

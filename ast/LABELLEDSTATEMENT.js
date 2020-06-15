@@ -1,5 +1,3 @@
-const IDENTIFIER = require("./IDENTIFIER");
-const STATEMENT = require("./STATEMENT");
 
 module.exports = class LABELLEDSTATEMENT{
     parse(node){
@@ -10,3 +8,6 @@ module.exports = class LABELLEDSTATEMENT{
         this.body.parse(node.body);
     }
 }
+
+const IDENTIFIER = require("./IDENTIFIER");
+const STATEMENT = require("./STATEMENT");

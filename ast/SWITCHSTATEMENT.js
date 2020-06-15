@@ -1,5 +1,3 @@
-const SWITCHCASE = require("./SWITCHCASE");
-const EXPRESSION = require("./EXPRESSION");
 
 module.exports = class SWITCHSTATEMENT {
     parse(node) {
@@ -13,3 +11,6 @@ module.exports = class SWITCHSTATEMENT {
         }
     }
 }
+
+const SWITCHCASE = require("./SWITCHCASE");
+const EXPRESSION = require("./EXPRESSION");

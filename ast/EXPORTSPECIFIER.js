@@ -1,4 +1,3 @@
-const IDENTIFIER = require("./IDENTIFIER");
 // interface ExportSpecifier {
 //     type: 'ExportSpecifier';
 //     exported: Identifier;
@@ -14,3 +13,5 @@ module.exports = class EXPORTSPECIFIER {
         this.local.parse(node.local);
     }
 }
+
+const IDENTIFIER = require("./IDENTIFIER");

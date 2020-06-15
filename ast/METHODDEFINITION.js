@@ -1,5 +1,3 @@
-const FUNCTIONEXPRESSION = require("./FUNCTIONEXPRESSION");
-const EXPRESSION = require("./EXPRESSION");
 
 module.exports = class METHODDEFINITION{
     parse(node){
@@ -20,3 +18,6 @@ module.exports = class METHODDEFINITION{
         this.static = node.static;
     }
 }
+
+const FUNCTIONEXPRESSION = require("./FUNCTIONEXPRESSION");
+const EXPRESSION = require("./EXPRESSION");

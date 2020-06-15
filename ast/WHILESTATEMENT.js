@@ -1,5 +1,4 @@
-const EXPRESSION = require("./EXPRESSION");
-const STATEMENT = require("./STATEMENT");
+
 module.exports = class WHILESTATEMENT {
     parse(node) {
         this.test = new EXPRESSION();
@@ -8,3 +7,6 @@ module.exports = class WHILESTATEMENT {
         this.body.parse(node.body);
     }
 }
+
+const EXPRESSION = require("./EXPRESSION");
+const STATEMENT = require("./STATEMENT");

@@ -1,8 +1,3 @@
-const CLASSDECLARATION = require("./CLASSDECLARATION");
-const FUNCTIONDECLARATION = require("./FUNCTIONDECLARATION");
-const VARIABLEDECLARATION = require("./VARIABLEDECLARATION");
-const LITERAL = require("./LITERAL");
-const EXPORTSPECIFIER = require("./EXPORTSPECIFIER");
 
 // interface ExportNamedDeclaration {
 //     type: 'ExportNamedDeclaration';
@@ -38,3 +33,9 @@ module.exports = class EXPORTALLDECLARATION {
         }
     }
 }
+
+const CLASSDECLARATION = require("./CLASSDECLARATION");
+const FUNCTIONDECLARATION = require("./FUNCTIONDECLARATION");
+const VARIABLEDECLARATION = require("./VARIABLEDECLARATION");
+const LITERAL = require("./LITERAL");
+const EXPORTSPECIFIER = require("./EXPORTSPECIFIER");
