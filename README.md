@@ -37,7 +37,7 @@ Put all the JS files you want to analyze in the /input folder, and run main.js t
 
 <b>Credit and References</b> 
 <ul>
-<li>Initial program parsing done using the esprima node library (esprima.org)</li>
-<li>JSNose: Detecting JavaScript code smells <a href="https://www.ece.ubc.ca/~amesbah/docs/scam13.pdf">https://www.ece.ubc.ca/~amesbah/docs/scam13.pdf</a></li>
+<li>Initial program parsing done using the esprima node library (<a href="https://esprima.org/">esprima.org</a>)</li>
+<li>JSNose: Detecting JavaScript code smells - <a href="https://www.ece.ubc.ca/~amesbah/docs/scam13.pdf">https://www.ece.ubc.ca/~amesbah/docs/scam13.pdf</a></li>
   <li>Code smell defn's: <a href="https://sourcemaking.com/refactoring/smells">https://sourcemaking.com/refactoring/smells</a></li>
     </ul>
