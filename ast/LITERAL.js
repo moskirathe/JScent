@@ -1,4 +1,6 @@
-export default class LITERAL {
+const REGEX = require("./REGEX");
+
+module.exports = class LITERAL {
     parse(node){
         this.value = node.value;
         this.raw = node.raw;

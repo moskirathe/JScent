@@ -1,6 +1,6 @@
 const EXPRESSION = require("./EXPRESSION");
 
-export default class BINARYEXPRESSION {
+module.exports = class BINARYEXPRESSION {
     parse(node) {
         this.left = new EXPRESSION();
         this.left.parse(node.left);

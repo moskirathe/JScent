@@ -9,20 +9,22 @@ const BLOCKSTATEMENT = require("./BLOCKSTATEMENT");
 //     body: BlockStatement; X
 // }
 
-export default class FUNCTIONDECLARATION {
+module.exports = class FUNCTIONDECLARATION {
     parse(node) {
-        this.id = new IDENTIFIER();
-        this.id.parse(node.id);
+        if (node.id !== null) {
+            this.id = new IDENTIFIER();
+            this.id.parse(node.id);
+        } else {
+            this.id = null;
+        }
         this.params = [];
         for (let param of node.params) {
             let temp = new FUNCTIONPARAMETER();
             this.params.push(temp);
             temp.parse(param);
         }
-        if (node.body.type === "BlockStatement") {
-            let temp = new BLOCKSTATEMENT();
-            this.body = temp;
-            temp.parse(node.body);
-        }
+        let temp = new BLOCKSTATEMENT();
+        this.body = temp;
+        temp.parse(node.body);
     }
 }

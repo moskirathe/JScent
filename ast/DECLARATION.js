@@ -2,7 +2,7 @@ const CLASSDECLARATION = require("./CLASSDECLARATION");
 const FUNCTIONDECLARATION = require("./FUNCTIONDECLARATION");
 const VARIABLEDECLARATION = require("./VARIABLEDECLARATION");
 
-export default class DECLARATION {
+module.exports = class DECLARATION {
     parse(node) {
         if (node.type === "ClassDeclaration") {
             this.type = new CLASSDECLARATION();

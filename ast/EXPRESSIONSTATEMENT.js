@@ -6,7 +6,7 @@ const EXPRESSION = require("./EXPRESSION");
 //     directive?: string;
 // }
 
-export default class EXPRESSIONSTATEMENT {
+module.exports = class EXPRESSIONSTATEMENT {
     parse(node) {
         this.expression = new EXPRESSION();
         this.expression.parse(node.expression);

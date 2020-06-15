@@ -1,4 +1,5 @@
-export default class TEMPLATELITERAL {
+module.exports = class THISEXPRESSION {
     parse(node){
+
     }
 }

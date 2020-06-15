@@ -1,10 +1,11 @@
 const EXPRESSION = require("./EXPRESSION");
+const STATEMENT = require("./STATEMENT");
 
-export default class SWITCHCASE {
+module.exports = class SWITCHCASE {
     parse(node) {
-        if (node.test !== null) {
+        if (node["test"] !== null) {
             this.test = new EXPRESSION();
-            this.test.parse(node.test);
+            this.test.parse(node["test"]);
         } else {
             this.test = null;
         }

@@ -1,4 +1,6 @@
-export default class OBJECTEXPRESSION{
+const PROPERTY = require("./PROPERTY");
+
+module.exports = class OBJECTEXPRESSION{
     parse(node){
         this.properties = [];
         for(let property of node.properties){

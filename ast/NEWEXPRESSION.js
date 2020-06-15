@@ -1,6 +1,7 @@
-import SPREADELEMENT from "./SPREADELEMENT";
+const SPREADELEMENT = require("./SPREADELEMENT");
+const EXPRESSION = require("./EXPRESSION");
 
-export default class NEWEXPRESSION{
+module.exports = class NEWEXPRESSION{
     parse(node){
         this.callee = new EXPRESSION();
         this.callee.parse(node.callee);

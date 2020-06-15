@@ -9,7 +9,7 @@ const STATEMENT = require("./STATEMENT");
 //     each: false;
 // }
 
-export default class FORINSTATEMENT {
+module.exports = class FORINSTATEMENT {
     parse(node) {
         this.left = new EXPRESSION();
         this.left.parse(node.left);

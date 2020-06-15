@@ -5,7 +5,7 @@ const IDENTIFIER = require("./IDENTIFIER");
 //     local: Identifier;
 // };
 
-export default class EXPORTSPECIFIER {
+module.exports = class EXPORTSPECIFIER {
     parse(node) {
         this.exported = new IDENTIFIER();
         this.exported.parse(node.exported);

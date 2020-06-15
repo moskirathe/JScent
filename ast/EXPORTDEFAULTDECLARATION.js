@@ -9,13 +9,13 @@ const FUNCTIONDECLARATION = require("./FUNCTIONDECLARATION");
 //     declaration: Identifier | BindingPattern | ClassDeclaration | Expression | FunctionDeclaration;
 // }
 
-export default class EXPORTALLDECLARATION {
+module.exports = class EXPORTDEFAULTDECLARATION {
     parse(node) {
         if (node.declaration.type === "Identifier") {
             let temp = new IDENTIFIER();
             this.declaration = temp;
             temp.parse(node.declaration);
-        } else if(node.declaration.type === "BindingPattern") {
+        } else if(node.declaration.type === "ArrayPattern" || node.declaration.type === "ObjectPattern") {
             let temp = new BINDINGPATTERN();
             this.declaration = temp;
             temp.parse(node.declaration);
@@ -23,12 +23,12 @@ export default class EXPORTALLDECLARATION {
             let temp = new CLASSDECLARATION();
             this.declaration = temp;
             temp.parse(node.declaration);
-        } else if(node.declaration.type === "Expression") {
-            let temp = new EXPRESSION();
-            this.declaration = temp;
-            temp.parse(node.declaration);
         } else if(node.declaration.type === "FunctionDeclaration") {
             let temp = new FUNCTIONDECLARATION();
+            this.declaration = temp;
+            temp.parse(node.declaration);
+        } else {
+            let temp = new EXPRESSION();
             this.declaration = temp;
             temp.parse(node.declaration);
         }

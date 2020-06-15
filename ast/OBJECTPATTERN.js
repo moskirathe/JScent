@@ -1,4 +1,6 @@
-export default class OBJECTPATTERN{
+const PROPERTY = require("./PROPERTY");
+
+module.exports = class OBJECTPATTERN{
     parse(node){
         this.properties = [];
         for(let property of node.properties){

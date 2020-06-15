@@ -1,4 +1,6 @@
-export default class LOGICALEXPRESSION{
+const EXPRESSION = require("./EXPRESSION");
+
+module.exports = class LOGICALEXPRESSION{
     parse(node){
         this.operator = node.operator;
         this.left = new EXPRESSION();

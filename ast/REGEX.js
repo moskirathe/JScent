@@ -1,4 +1,4 @@
-export default class REGEX {
+module.exports = class REGEX {
     parse(node){
         this.pattern = node.pattern;
         this.flags = node.flags;

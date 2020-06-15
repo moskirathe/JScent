@@ -3,7 +3,7 @@
 //     type: 'EmptyStatement';
 // }
 
-export default class EMPTYSTATEMENT {
+module.exports =  class EMPTYSTATEMENT {
     parse(node) {
     }
 }

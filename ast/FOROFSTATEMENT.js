@@ -8,7 +8,7 @@ const STATEMENT = require("./STATEMENT");
 //     body: Statement;
 // }
 
-export default class FOROFSTATEMENT {
+module.exports = class FOROFSTATEMENT {
     parse(node) {
         this.left = new EXPRESSION();
         this.left.parse(node.left);

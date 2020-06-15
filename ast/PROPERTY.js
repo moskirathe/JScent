@@ -1,4 +1,6 @@
-export default class PROPERTY {
+const EXPRESSION = require("./EXPRESSION");
+
+module.exports = class PROPERTY {
     parse(node) {
         this.key = new EXPRESSION();
         this.key.parse(node.key);
@@ -6,6 +8,8 @@ export default class PROPERTY {
         if(node.value != null) {
             this.value = new EXPRESSION();
             this.value.parse(node.value);
+        } else {
+            this.value = null;
         }
         this.kind = node.kind();
         this.method = node.method();
