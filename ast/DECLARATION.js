@@ -1,6 +1,7 @@
 module.exports = class DECLARATION {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         if (node.type === "ClassDeclaration") {
             this.type = new CLASSDECLARATION();
             this.type.parse(node);

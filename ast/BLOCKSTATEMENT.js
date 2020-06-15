@@ -1,6 +1,7 @@
 module.exports = class BLOCKSTATEMENT {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         this.body = [];
         for (let item of node.body) {
             let temp = new STATEMENTLISTITEM();

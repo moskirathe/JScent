@@ -2,6 +2,7 @@
 module.exports = class TEMPLATELITERAL {
     parse(node){
         this.loc = node.loc;
+        this.comments = node.comments;
         this.quasis = [];
         for (let quasi of node.quasis) {
             let temp = new TEMPLATEELEMENT();

@@ -2,6 +2,7 @@
 module.exports = class LABELLEDSTATEMENT{
     parse(node){
         this.loc = node.loc;
+        this.comments = node.comments;
         this.label = new IDENTIFIER();
         this.label.parse(node.label);
 

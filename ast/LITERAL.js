@@ -2,6 +2,7 @@
 module.exports = class LITERAL {
     parse(node){
         this.loc = node.loc;
+        this.comments = node.comments;
         this.value = node.value;
         this.raw = node.raw;
 

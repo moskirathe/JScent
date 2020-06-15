@@ -2,6 +2,7 @@
 module.exports = class ASSIGNMENTPATTERN {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         if (node.left.type === "Identifier") {
             this.left = new IDENTIFIER();
             this.left.parse(node.left);

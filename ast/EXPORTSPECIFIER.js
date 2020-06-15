@@ -7,6 +7,7 @@
 module.exports = class EXPORTSPECIFIER {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         this.exported = new IDENTIFIER();
         this.exported.parse(node.exported);
 

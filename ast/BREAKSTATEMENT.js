@@ -2,6 +2,7 @@
 module.exports = class BREAKSTATEMENT {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         if (node.label !== null) {
             this.label = new IDENTIFIER();
             this.label.parse(node);

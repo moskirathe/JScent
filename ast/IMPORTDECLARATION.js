@@ -2,6 +2,7 @@
 module.exports = class IMPORTDECLARATION {
     parse(node){
         this.loc = node.loc;
+        this.comments = node.comments;
         this.specifiers = [];
         for(let specifier of node.specifiers){
             let temp = new IMPORTSPECIFIER();

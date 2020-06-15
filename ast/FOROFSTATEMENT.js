@@ -9,6 +9,7 @@
 module.exports = class FOROFSTATEMENT {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         this.left = new EXPRESSION();
         this.left.parse(node.left);
 

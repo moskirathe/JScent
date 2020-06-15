@@ -9,6 +9,7 @@
 module.exports = class EXPORTALLDECLARATION {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         this.source = new LITERAL();
         this.source.parse(node.source);
         this.specifiers = [];

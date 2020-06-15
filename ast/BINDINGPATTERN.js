@@ -2,6 +2,7 @@
 module.exports = class BINDINGPATTERN {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         if (node.type === "ObjectPattern") {
             this.pattern = new OBJECTPATTERN();
             this.pattern.parse(node);

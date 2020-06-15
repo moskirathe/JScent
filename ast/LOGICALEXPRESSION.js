@@ -2,6 +2,7 @@
 module.exports = class LOGICALEXPRESSION{
     parse(node){
         this.loc = node.loc;
+        this.comments = node.comments;
         this.operator = node.operator;
         this.left = new EXPRESSION();
         this.left.parse(node.left);

@@ -2,6 +2,7 @@
 module.exports = class PROPERTY {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         this.key = new EXPRESSION();
         this.key.parse(node.key);
         this.computed = node.computed;

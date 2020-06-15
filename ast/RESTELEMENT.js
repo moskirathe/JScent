@@ -2,6 +2,7 @@
 module.exports = class RESTELEMENT{
     parse(node){
         this.loc = node.loc;
+        this.comments = node.comments;
         this.argument = null;
         if(node.argument.type === 'Identifier'){
             this.argument = new IDENTIFIER();

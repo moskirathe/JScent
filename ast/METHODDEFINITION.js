@@ -2,6 +2,7 @@
 module.exports = class METHODDEFINITION{
     parse(node){
         this.loc = node.loc;
+        this.comments = node.comments;
         if(node.key != null){
             this.key = new EXPRESSION();
             this.key.parse(node.key);

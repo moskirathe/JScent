@@ -2,6 +2,7 @@
 module.exports = class CATCHCLAUSE {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         if (node.param.type === "Identifier") {
             this.param = new IDENTIFIER();
             this.param.parse(node.param);

@@ -2,6 +2,7 @@
 module.exports = class CLASSDECLARATION {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         if (node.id !== null) {
             this.id = new IDENTIFIER();
             this.id.parse(node.id);

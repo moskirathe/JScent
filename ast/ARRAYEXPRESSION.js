@@ -1,6 +1,7 @@
 module.exports = class ARRAYEXPRESSION {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         this.elements = [];
         for (let elem of node.elements) {
             if (elem.type === "SpreadElement") {

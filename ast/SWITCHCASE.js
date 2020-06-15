@@ -2,6 +2,7 @@
 module.exports = class SWITCHCASE {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         if (node["test"] !== null) {
             this.test = new EXPRESSION();
             this.test.parse(node["test"]);

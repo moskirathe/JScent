@@ -10,6 +10,7 @@
 module.exports = class FORSTATEMENT {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         if (node.init === null) {
              this.init = null;
         } else if (node.init.type === "VariableDeclaration") {

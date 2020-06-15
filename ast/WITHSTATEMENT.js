@@ -2,6 +2,7 @@
 module.exports = class WITHSTATEMENT {
     parse(node) {
         this.loc = node.loc;
+        this.comments = node.comments;
         this.object = new EXPRESSION();
         this.object.parse(node["test"]);
         this.body = new STATEMENT();

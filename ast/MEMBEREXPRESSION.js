@@ -2,6 +2,7 @@
 module.exports = class MEMBEREXPRESSION{
     parse(node){
         this.loc = node.loc;
+        this.comments = node.comments;
         this.computed = node.computed;
         this.object = new EXPRESSION();
         this.object.parse(node.object);
