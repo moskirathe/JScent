@@ -47,7 +47,7 @@ module.exports = class FUNCTIONEXPRESSION {
         }
         let counter = 0;
         for (let comment of table.comments) {
-            if (comment.loc.start >= start && comment.loc.end < end) {
+            if (comment.loc.start.line >= start && comment.loc.end.line < end) {
                 counter++;
             }
         }
