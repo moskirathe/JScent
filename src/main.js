@@ -244,5 +244,10 @@ esprima.tokenize(program);
 console.log(esprima.parse(program,{loc:true}));
 let p = new PROGRAM();
 p.parse(esprima.parse(program, {loc:true}));
+let table = {
+    memberCalls: {},
+    defined: {}
+}
+p.evaluate(esprima.parse(program, {loc:true}));
 
 
