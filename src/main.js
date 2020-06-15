@@ -1,5 +1,5 @@
 const esprima = require('esprima');
-const PROGRAM = require('../ast/PROGRAM');
+
 const program = "const express = require('express');\n" +
     "const connectDB = require('./config/db');\n" +
     "const axios = require('axios');\n" +
@@ -200,6 +200,12 @@ const program = "const express = require('express');\n" +
     "\n" +
     "// Takes various string inputs and returns same converted to Number to be stored\n" +
     "function convertToNum(text) {\n" +
+    "// testing\n" +
+    "// 1\n" +
+    "// 2\n" +
+    "// 3\n" +
+    "// too many\n" +
+    "// comments\n" +
     "    text = text.replace(/,/g, \"\");\n" +
     "    let last = text[text.length - 1];\n" +
     "    switch(last) {\n" +
@@ -237,20 +243,74 @@ const program = "const express = require('express');\n" +
     "       stock = stock.split(\",\");\n" +
     "       result[stock[0].trim()] = stock[1];\n" +
     "    }\n" +
+    "    let a = b.test.test.test.test.test\n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
+    "    \n" +
     "    return result;\n" +
     "}"
 
-esprima.tokenize(program);
-console.log(esprima.parse(program,{loc:true, comment: true}));
-let p = new PROGRAM();
-p.parse(esprima.parse(program, {loc:true, comment: true}));
-let table = {
-    memberCalls: {},
-    defined: {},
-    longChains: [],
-    longMethods: [],
-    commentMethods: []
+function init() {
+    esprima.tokenize(program);
+//console.log(esprima.parse(program,{loc:true, comment: true}));
+    let p = new PROGRAM();
+    let comments = p.parse(esprima.parse(program, {loc: true, comment: true}));
+    let table = {
+        comments: comments,
+        memberCalls: {},
+        defined: {},
+        longChains: [],
+        longMethods: [],
+        commentMethods: []
+    }
+    p.evaluate(table);
+    console.log(table);
 }
-p.evaluate(table);
+
+const PROGRAM = require('../ast/PROGRAM');
+
+init();
 
 

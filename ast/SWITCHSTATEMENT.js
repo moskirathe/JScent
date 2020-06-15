@@ -13,7 +13,6 @@ module.exports = class SWITCHSTATEMENT {
         }
     }
     evaluate(table) {
-        this.loc.evaluate(table);
         this.discriminant.evaluate(table);
         for (let argument of this.cases) {
             argument.evaluate(table);

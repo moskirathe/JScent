@@ -11,7 +11,6 @@ module.exports = class SEQUENCEEXPRESSION{
         }
     }
     evaluate(table) {
-        this.loc.evaluate(table);
         for (let argument of this.expressions) {
             argument.evaluate(table);
         }

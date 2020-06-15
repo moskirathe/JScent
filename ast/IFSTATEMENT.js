@@ -15,7 +15,7 @@ module.exports = class IFSTATEMENT {
 
         this.consequent = new STATEMENT();
         this.consequent.parse(node.consequent);
-
+        this.alternate = null;
         if (node.alternate) {
             this.alternate = new STATEMENT();
             this.alternate.parse(node.alternate);
@@ -24,7 +24,9 @@ module.exports = class IFSTATEMENT {
     evaluate(table) {
         this.test.evaluate(table);
         this.consequent.evaluate(table);
-        this.alternate.evaluate(table);
+        if (this.alternate) {
+            this.alternate.evaluate(table);
+        }
     }
 
 

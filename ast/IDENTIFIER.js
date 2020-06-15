@@ -5,6 +5,6 @@ module.exports = class IDENTIFIER {
         this.name = node.name;
     }
     evaluate(table) {
-        this.name.evaluate(table);
+        return this.name;
     }
 }

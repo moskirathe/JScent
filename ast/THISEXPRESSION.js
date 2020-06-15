@@ -4,6 +4,6 @@ module.exports = class THISEXPRESSION {
         this.comments = node.comments;
     }
     evaluate(table) {
-        this.loc.evaluate(table);
+        return "this";
     }
 }

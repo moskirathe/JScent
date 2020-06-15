@@ -8,7 +8,7 @@ module.exports = class AWAITEXPRESSION {
     }
 
     evaluate(table) {
-        this.argument.evaluate(table);
+        return this.argument.evaluate(table);
     }
 }
 

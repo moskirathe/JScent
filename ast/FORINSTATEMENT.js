@@ -11,7 +11,11 @@ module.exports = class FORINSTATEMENT {
     parse(node) {
         this.loc = node.loc;
         this.comments = node.comments;
-        this.left = new EXPRESSION();
+        if (node.left.type === "VariableDeclaration") {
+            this.left = new VARIABLEDECLARATION();
+        } else {
+            this.left = new EXPRESSION();
+        }
         this.left.parse(node.left);
 
         this.right = new EXPRESSION();
@@ -28,4 +32,5 @@ module.exports = class FORINSTATEMENT {
 }
 
 const EXPRESSION = require("./EXPRESSION");
+const VARIABLEDECLARATION = require("./VARIABLEDECLARATION");
 const STATEMENT = require("./STATEMENT");

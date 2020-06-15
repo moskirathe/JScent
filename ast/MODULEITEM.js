@@ -22,7 +22,7 @@ module.exports = class MODULEITEM {
     }
 
     evaluate(table) {
-        this.type.evaluate(table);
+        return this.type.evaluate(table);
     }
 }
 

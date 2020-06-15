@@ -20,6 +20,7 @@ module.exports = class ARRAYEXPRESSION {
         for (let elem of this.elements) {
             elem.evaluate(table);
         }
+        return this.elements;
     }
 }
 

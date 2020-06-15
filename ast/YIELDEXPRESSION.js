@@ -11,8 +11,9 @@ module.exports = class YIELDEXPRESSION {
         }
     }
     evaluate(table) {
-        this.loc.evaluate(table);
-        this.argument.evaluate(table);
+        if (this.argument) {
+            return this.argument.evaluate(table);
+        }
     }
 }
 

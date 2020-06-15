@@ -20,11 +20,12 @@ module.exports = class METHODDEFINITION{
         this.static = node.static;
     }
     evaluate(table) {
-        this.key.evaluate(table);
-        this.computed.evaluate(table);
-        this.value.evaluate(table);
-        this.kind.evaluate(table);
-        this.static.evaluate(table);
+        if (this.key) {
+            return this.key.evaluate(table);
+        }
+        if (this.value) {
+            return this.value.evaluate(table);
+        }
     }
 }
 

@@ -12,7 +12,9 @@ module.exports = class BREAKSTATEMENT {
     }
 
     evaluate(table) {
-        this.label.evaluate(table);
+        if (this.label) {
+            this.label.evaluate(table);
+        }
     }
 }
 

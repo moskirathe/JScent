@@ -5,7 +5,6 @@ module.exports = class TEMPLATEELEMENT {
         this.value = node.value;
     }
     evaluate(table) {
-        this.loc.evaluate(table);
-        this.value.evaluate(table);
+
     }
 }

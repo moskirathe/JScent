@@ -12,8 +12,7 @@ class STATEMENTLISTITEM {
         }
     }
     evaluate(table) {
-        this.loc.evaluate(table);
-        this.item.evaluate(table);
+        return this.item.evaluate(table);
     }
 }
 

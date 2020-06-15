@@ -17,9 +17,9 @@ class PROGRAM{
                 temp.parse(item);
             }
         }
+        return node.comments;
     }
     evaluate(table) {
-        this.sourceType.evaluate(table);
         for (let argument of this.body) {
             argument.evaluate(table);
         }

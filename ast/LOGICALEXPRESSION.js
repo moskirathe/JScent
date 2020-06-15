@@ -10,7 +10,6 @@ module.exports = class LOGICALEXPRESSION{
         this.right.parse(node.right);
     }
     evaluate(table) {
-        this.operator.evaluate(table);
         this.left.evaluate(table);
         this.right.evaluate(table);
     }

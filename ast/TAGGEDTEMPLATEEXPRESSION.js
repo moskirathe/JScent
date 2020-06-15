@@ -9,7 +9,6 @@ module.exports = class TAGGEDTEMPLATEEXPRESSION {
         this.readonlyquasi.parse(node["readonly quasi"]);
     }
     evaluate(table) {
-        this.loc.evaluate(table);
         this.readonlytag.evaluate(table);
         this.readonlyquasi.evaluate(table);
     }

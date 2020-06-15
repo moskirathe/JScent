@@ -7,8 +7,7 @@ module.exports = class SPREADELEMENT {
         this.argument.parse(node.argument);
     }
     evaluate(table) {
-        this.loc.evaluate(table);
-        this.argument.evaluate(table);
+        return this.argument.evaluate(table);
     }
 }
 

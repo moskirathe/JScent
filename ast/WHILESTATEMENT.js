@@ -9,7 +9,6 @@ module.exports = class WHILESTATEMENT {
         this.body.parse(node.body);
     }
     evaluate(table) {
-        this.loc.evaluate(table);
         this.test.evaluate(table);
         this.body.evaluate(table);
     }

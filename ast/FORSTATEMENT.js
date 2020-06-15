@@ -36,9 +36,15 @@ module.exports = class FORSTATEMENT {
         this.body.parse(node.body);
     }
     evaluate(table) {
-        this.init.evaluate(table);
-        this.test.evaluate(table);
-        this.update.evaluate(table);
+        if (this.init) {
+            this.init.evaluate(table);
+        }
+        if (this.test) {
+            this.test.evaluate(table);
+        }
+        if (this.update) {
+            this.update.evaluate(table);
+        }
         this.body.evaluate(table);
     }
 }

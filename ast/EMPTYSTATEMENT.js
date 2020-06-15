@@ -8,7 +8,7 @@ module.exports =  class EMPTYSTATEMENT {
         this.comments = node.comments;
     }
     evaluate(table) {
-        this.loc.evaluate(table);
+
     }
 }
 

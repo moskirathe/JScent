@@ -18,10 +18,10 @@ module.exports = class NEWEXPRESSION{
         }
     }
     evaluate(table) {
-        this.callee.evaluate(table);
         for (let argument of this.arguments) {
             argument.evaluate(table);
         }
+        return this.callee.evaluate(table);
     }
 }
 

@@ -17,7 +17,7 @@ module.exports = class TEMPLATELITERAL {
         }
     }
     evaluate(table) {
-        this.loc.evaluate(table);
+
         for (let argument of this.quasis) {
             argument.evaluate(table);
         }

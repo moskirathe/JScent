@@ -6,7 +6,6 @@ module.exports = class REGEX {
         this.flags = node.flags;
     }
     evaluate(table) {
-        this.pattern.evaluate(table);
-        this.flags.evaluate(table);
+        return this.pattern;
     }
 }

@@ -19,10 +19,14 @@ module.exports = class TRYSTATEMENT {
         }
     }
     evaluate(table) {
-        this.loc.evaluate(table);
+
         this.block.evaluate(table);
-        this.handler.evaluate(table);
-        this.finalizer.evaluate(table);
+        if (this.handler) {
+            this.handler.evaluate(table);
+        }
+        if (this.finalizer) {
+            this.finalizer.evaluate(table);
+        }
     }
 }
 

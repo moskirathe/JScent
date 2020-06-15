@@ -19,11 +19,9 @@ module.exports = class PROPERTY {
     }
     evaluate(table) {
         this.key.evaluate(table);
-        this.computed.evaluate(table);
-        this.value.evaluate(table);
-        this.kind.evaluate(table);
-        this.method.evaluate(table);
-        this.shorthand.evaluate(table);
+        if (this.value) {
+            this.value.evaluate(table);
+        }
     }
 }
 

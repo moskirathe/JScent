@@ -103,12 +103,12 @@ module.exports = class EXPRESSION {
                 this.type.parse(node);
                 break;
             default:
-                this.type = null;
+                this.type = node.type;
         }
     }
 
     evaluate(table) {
-        this.type.evaluate(table);
+        return this.type.evaluate(table);
     }
 }
 

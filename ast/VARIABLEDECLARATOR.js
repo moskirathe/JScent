@@ -13,7 +13,7 @@ module.exports = class VARIABLEDECLARATOR {
             temp.parse(node.id);
         }
         if (node.init !== null) {
-            this.init = new EXPRESSION ();
+            this.init = new EXPRESSION();
             this.init.parse(node.init);
         } else {
             this.init = null;
@@ -22,7 +22,10 @@ module.exports = class VARIABLEDECLARATOR {
 
     evaluate(table) {
         let id = this.id.evaluate(table);
-        let init = this.init.evaluate(table);
+        let init = this.init
+        if (this.init) {
+            init = this.init.evaluate(table);
+        }
         table.defined[id] = init;
     }
 }

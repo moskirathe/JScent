@@ -10,8 +10,7 @@ module.exports = class RETURNSTATEMENT{
         }
     }
     evaluate(table) {
-        this.loc.evaluate(table);
-        this.argument.evaluate(table);
+        return this.argument.evaluate(table);
     }
 }
 
