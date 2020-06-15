@@ -5,6 +5,6 @@ export default class OBJECTPATTERN{
             let temp = new PROPERTY();
             this.properties.push(temp);
             temp.parse(property);
-            }
+        }
     }
 }

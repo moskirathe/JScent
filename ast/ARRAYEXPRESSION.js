@@ -1,4 +1,7 @@
-export default class ARRAYEXPRESSION {
+const SPREADELEMENT = require("./SPREADELEMENT");
+const EXPRESSION = require("./EXPRESSION");
+
+module.exports = class ARRAYEXPRESSION {
     parse(node) {
         this.elements = [];
         for (let elem of node.elements) {
@@ -11,6 +14,12 @@ export default class ARRAYEXPRESSION {
                 this.elements.push(temp);
                 temp.parse(elem);
             }
+        }
+    }
+
+    evaluate(table) {
+        for (let elem of this.elements) {
+            elem.evaluate(table);
         }
     }
 }

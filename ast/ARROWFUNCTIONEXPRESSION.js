@@ -23,4 +23,10 @@ export default class ARROWFUNCTIONEXPRESSION {
             temp.parse(node.body);
         }
     }
+
+    evaluate(table) {
+        for (let param of this.params) {
+            param.evaluate(table);
+        }
+    }
 }
