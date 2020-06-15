@@ -9,11 +9,15 @@ module.exports = class IMPORTSPECIFIER {
         if (typeof node.imported !== "undefined") {
             this.imported = new IDENTIFIER();
             this.imported.parse(this.imported);
+        } else {
+            this.imported = null;
         }
     }
     evaluate(table) {
         let local = this.local.evaluate(table);
-        let imported = this.imported.evaluate(table);
+        if (this.imported) {
+            let imported = this.imported.evaluate(table);
+        }
         table.imports[local] = this.loc;
     }
 }

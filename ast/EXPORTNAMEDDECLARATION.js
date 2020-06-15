@@ -6,12 +6,17 @@
 //     source: Literal; X
 // }
 
-module.exports = class EXPORTALLDECLARATION {
+module.exports = class EXPORTNAMEDECLARATION {
     parse(node) {
+        console.log(node);
         this.loc = node.loc;
         this.comments = node.comments;
         this.source = new LITERAL();
-        this.source.parse(node.source);
+        if (node.source) {
+            this.source.parse(node.source);
+        } else {
+            this.source = null;
+        }
         this.specifiers = [];
 
         for (let specifier of node.specifiers) {
@@ -35,7 +40,9 @@ module.exports = class EXPORTALLDECLARATION {
         }
     }
     evaluate(table) {
-        this.source.evaluate(table);
+        if (this.source) {
+            this.source.evaluate(table);
+        }
         for (let argument of this.specifiers) {
             argument.evaluate(table);
         }

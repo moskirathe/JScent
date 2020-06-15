@@ -300,7 +300,7 @@ function init() {
     esprima.tokenize(program);
 //console.log(esprima.parse(program,{loc:true, comment: true}));
     let p = new PROGRAM();
-    let comments = p.parse(esprima.parse(program, {loc: true, comment: true}));
+    let comments = p.parse(esprima.parse(program, {loc: true, comment: true, sourceType: "module"}));
     let table = {
         comments: comments,
         memberCalls: {},
@@ -312,7 +312,6 @@ function init() {
         commentMethods: []
     }
     p.evaluate(table);
-    console.log(table);
     generateReport(table);
 }
 
