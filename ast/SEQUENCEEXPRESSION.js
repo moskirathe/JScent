@@ -1,6 +1,6 @@
-import EXPRESSION from "./EXPRESSION";
+const EXPRESSION = require ("./EXPRESSION");
 
-export default class SEQUENCEEXPRESSION{
+module.exports = class SEQUENCEEXPRESSION{
     parse(node){
         this.expressions = [];
         for(let expression of node.expressions){

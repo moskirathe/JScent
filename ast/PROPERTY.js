@@ -1,4 +1,6 @@
-export default class PROPERTY {
+const EXPRESSION = require("./EXPRESSION");
+
+module.exports = class PROPERTY {
     parse(node) {
         this.key = new EXPRESSION();
         this.key.parse(node.key);

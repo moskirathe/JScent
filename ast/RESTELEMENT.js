@@ -1,7 +1,7 @@
-import IDENTIFIER from "./IDENTIFIER";
-import BINDINGPATTERN from "./BINDINGPATTERN";
+const IDENTIFIER = require("./IDENTIFIER");
+const BINDINGPATTERN = require ("./BINDINGPATTERN");
 
-export default class RESTELEMENT{
+module.exports = class RESTELEMENT{
     parse(node){
         this.argument = null;
         if(node.argument.type === 'Identifier'){

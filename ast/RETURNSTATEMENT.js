@@ -1,6 +1,6 @@
-import EXPRESSION from "./EXPRESSION";
+const EXPRESSION = require("./EXPRESSION");
 
-export default class RETURNSTATEMENT{
+module.exports = class RETURNSTATEMENT{
     parse(node){
         this.argument = null;
         if(node.argument != null){

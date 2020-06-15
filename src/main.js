@@ -1,4 +1,5 @@
 const esprima = require('esprima');
+const PROGRAM = require('../ast/PROGRAM');
 const program = "function handleRequest(userScore) {\n" +
     "    let companies = [];\n" +
     "    let test = Test.test;\n" +
@@ -17,5 +18,8 @@ const program = "function handleRequest(userScore) {\n" +
     "}"
 
 esprima.tokenize(program);
-console.log(esprima.parse(program).body[0].body.body[1].declarations[0].init.object);
+console.log(esprima.parse(program));
+let p = new PROGRAM();
+p.parse(esprima.parse(program));
+
 

@@ -1,4 +1,4 @@
-import TEMPLATEELEMENT from "./TEMPLATEELEMENT";
+const TEMPLATEELEMENT = require ("./TEMPLATEELEMENT");
 const EXPRESSION = require("./EXPRESSION");
 
 module.exports = class TEMPLATELITERAL {
