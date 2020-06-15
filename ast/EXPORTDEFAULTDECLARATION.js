@@ -28,6 +28,9 @@ module.exports = class EXPORTDEFAULTDECLARATION {
             temp.parse(node.declaration);
         }
     }
+    evaluate(table) {
+        this.declaration.evaluate(table);
+    }
 }
 
 const IDENTIFIER = require("./IDENTIFIER");

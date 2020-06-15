@@ -9,6 +9,7 @@ module.exports = class OBJECTEXPRESSION{
             temp.parse(property);
         }
     }
+
 }
 
 const PROPERTY = require("./PROPERTY");

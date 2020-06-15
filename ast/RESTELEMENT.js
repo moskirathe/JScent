@@ -11,6 +11,9 @@ module.exports = class RESTELEMENT{
             this.argument.parse(node.argument);
         }
     }
+    evaluate(table) {
+        this.argument.evaluate(table);
+    }
 }
 
 const IDENTIFIER = require("./IDENTIFIER");

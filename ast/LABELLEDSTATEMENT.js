@@ -8,6 +8,10 @@ module.exports = class LABELLEDSTATEMENT{
         this.body = new STATEMENT();
         this.body.parse(node.body);
     }
+    evaluate(table) {
+        this.label.evaluate(table);
+        this.body.evaluate(table);
+    }
 }
 
 const IDENTIFIER = require("./IDENTIFIER");

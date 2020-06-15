@@ -12,6 +12,9 @@ module.exports = class DECLARATION {
             this.type.parse(node);
         }
     }
+    evaluate(table) {
+        this.type.evaluate(table);
+    }
 }
 
 const CLASSDECLARATION = require("./CLASSDECLARATION");

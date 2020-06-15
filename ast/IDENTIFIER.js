@@ -3,4 +3,7 @@ module.exports = class IDENTIFIER {
         this.loc = node.loc;
         this.name = node.name;
     }
+    evaluate(table) {
+        this.name.evaluate(table);
+    }
 }

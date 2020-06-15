@@ -10,6 +10,9 @@ module.exports = class EXPORTALLDECLARATION {
         this.source = new LITERAL();
         this.source.parse(node.source);
     }
+    evaluate(table) {
+        this.source.evaluate(table);
+    }
 }
 
 const LITERAL = require("./LITERAL");

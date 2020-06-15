@@ -18,6 +18,12 @@ module.exports = class FOROFSTATEMENT {
         this.body = new STATEMENT();
         this.body.parse(node.body);
     }
+    evaluate(table) {
+        this.left.evaluate(table);
+        this.right.evaluate(table);
+        this.body.evaluate(table);
+    }
+
 }
 
 const EXPRESSION = require("./EXPRESSION");

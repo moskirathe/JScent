@@ -16,6 +16,14 @@ module.exports = class PROPERTY {
         this.shorthand = node.shorthand;
 
     }
+    evaluate(table) {
+        this.key.evaluate(table);
+        this.computed.evaluate(table);
+        this.value.evaluate(table);
+        this.kind.evaluate(table);
+        this.method.evaluate(table);
+        this.shorthand.evaluate(table);
+    }
 }
 
 const EXPRESSION = require("./EXPRESSION");

@@ -33,6 +33,13 @@ module.exports = class EXPORTALLDECLARATION {
             temp.parse(node.declaration);
         }
     }
+    evaluate(table) {
+        this.source.evaluate(table);
+        for (let argument of this.specifiers) {
+            argument.evaluate(table);
+        }
+        this.declaration.evaluate(table);
+    }
 }
 
 const CLASSDECLARATION = require("./CLASSDECLARATION");

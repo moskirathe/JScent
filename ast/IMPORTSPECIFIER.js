@@ -10,6 +10,10 @@ module.exports = class IMPORTSPECIFIER {
             this.imported.parse(this.imported);
         }
     }
+    evaluate(table) {
+        this.local.evaluate(table);
+        this.imported.evaluate(table);
+    }
 }
 
 const IDENTIFIER = require("./IDENTIFIER");

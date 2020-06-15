@@ -16,6 +16,10 @@ module.exports = class DOWHILESTATMENT {
         this.test = e;
         e.parse(node.test);
     }
+    evaluate(table) {
+        this.body.evaluate(table);
+        this.test.evaluate(table);
+    }
 }
 
 const STATEMENT = require("./STATEMENT");

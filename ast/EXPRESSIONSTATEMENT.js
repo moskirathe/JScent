@@ -11,6 +11,9 @@ module.exports = class EXPRESSIONSTATEMENT {
         this.expression = new EXPRESSION();
         this.expression.parse(node.expression);
     }
+    evaluate(table) {
+        this.expression.evaluate(table);
+    }
 }
 
 const EXPRESSION = require("./EXPRESSION");

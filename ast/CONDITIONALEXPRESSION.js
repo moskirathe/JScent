@@ -9,6 +9,12 @@ module.exports = class CONDITIONALEXPRESSION {
         this.alternate = new EXPRESSION();
         this.alternate.parse(node.alternate);
     }
+    evaluate(table) {
+        this.test.evaluate(table);
+        this.consequent.evaluate(table);
+        this.alternate.evaluate(table);
+
+    }
 }
 
 const EXPRESSION = require("./EXPRESSION");

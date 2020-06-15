@@ -34,6 +34,12 @@ module.exports = class FORSTATEMENT {
         this.body = new STATEMENT();
         this.body.parse(node.body);
     }
+    evaluate(table) {
+        this.init.evaluate(table);
+        this.test.evaluate(table);
+        this.update.evaluate(table);
+        this.body.evaluate(table);
+    }
 }
 
 const EXPRESSION = require("./EXPRESSION");

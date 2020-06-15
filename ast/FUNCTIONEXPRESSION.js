@@ -25,6 +25,13 @@ module.exports = class FUNCTIONEXPRESSION {
         this.body = temp;
         temp.parse(node.body);
     }
+    evaluate(table) {
+        this.id.evaluate(table);
+        for (let argument of this.params) {
+            argument.evaluate(table);
+        }
+        this.body.evaluate(table);
+    }
 }
 
 const IDENTIFIER = require("./IDENTIFIER");

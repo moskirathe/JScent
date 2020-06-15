@@ -9,6 +9,11 @@ module.exports = class OBJECTPATTERN{
             temp.parse(property);
         }
     }
+    evaluate(table) {
+        for (let argument of this.properties) {
+            argument.evaluate(table);
+        }
+    }
 }
 
 const PROPERTY = require("./PROPERTY");

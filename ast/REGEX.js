@@ -4,4 +4,8 @@ module.exports = class REGEX {
         this.pattern = node.pattern;
         this.flags = node.flags;
     }
+    evaluate(table) {
+        this.pattern.evaluate(table);
+        this.flags.evaluate(table);
+    }
 }

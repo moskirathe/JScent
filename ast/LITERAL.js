@@ -10,6 +10,11 @@ module.exports = class LITERAL {
             this.regex.parse(node.regex);
         }
     }
+    evaluate(table) {
+        this.value.evaluate(table);
+        this.raw.evaluate(table);
+        this.regex.evaluate(table);
+    }
 }
 
 const REGEX = require("./REGEX");

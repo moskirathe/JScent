@@ -17,6 +17,12 @@ class PROGRAM{
             }
         }
     }
+    evaluate(table) {
+        this.sourceType.evaluate(table);
+        for (let argument of this.body) {
+            argument.evaluate(table);
+        }
+    }
 }
 
 module.exports = PROGRAM;

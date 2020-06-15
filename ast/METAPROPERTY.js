@@ -7,6 +7,10 @@ module.exports = class METAPROPERTY{
         this.property = new IDENTIFIER();
         this.property.parse(node.property);
     }
+    evaluate(table) {
+        this.meta.evaluate(table);
+        this.property.evaluate(table);
+    }
 }
 
 const IDENTIFIER = require("./IDENTIFIER");

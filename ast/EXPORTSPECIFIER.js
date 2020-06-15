@@ -13,6 +13,10 @@ module.exports = class EXPORTSPECIFIER {
         this.local = new IDENTIFIER();
         this.local.parse(node.local);
     }
+    evaluate(table) {
+        this.exported.evaluate(table);
+        this.local.evaluate(table);
+    }
 }
 
 const IDENTIFIER = require("./IDENTIFIER");

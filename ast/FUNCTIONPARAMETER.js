@@ -13,6 +13,9 @@ module.exports = class FUNCTIONPARAMETER {
             this.type.parse(node);
         }
     }
+    evaluate(table) {
+        this.type.evaluate(table);
+    }
 }
 
 const ASSIGNMENTPATTERN = require("./ASSIGNMENTPATTERN");

@@ -17,6 +17,11 @@ module.exports = class CLASSEXPRESSION {
         this.body = new CLASSBODY();
         this.body.parse(node.body);
     }
+    evaluate(table) {
+        this.id.evaluate(table);
+        this.superClass.evaluate(table);
+        this.body.evaluate(table);
+    }
 }
 
 const IDENTIFIER = require("./IDENTIFIER");

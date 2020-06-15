@@ -11,6 +11,12 @@ module.exports = class IMPORTDECLARATION {
         this.source = new LITERAL();
         this.source.parse(node.source);
     }
+    evaluate(table) {
+        for (let argument of this.specifiers) {
+            argument.evaluate(table);
+        }
+        this.source.evaluate(table);
+    }
 }
 
 const LITERAL = require("./LITERAL");

@@ -8,6 +8,11 @@ module.exports = class LOGICALEXPRESSION{
         this.right = new EXPRESSION();
         this.right.parse(node.right);
     }
+    evaluate(table) {
+        this.operator.evaluate(table);
+        this.left.evaluate(table);
+        this.right.evaluate(table);
+    }
 }
 
 const EXPRESSION = require("./EXPRESSION");
