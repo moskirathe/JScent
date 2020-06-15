@@ -25,12 +25,15 @@ Put all the JS files you want to analyze in the /input folder, and run main.js t
   <li>Dead code - A variable, parameter, field, method or class is no longer used (usually because it is obsolete).</li>
   <li>Switch statement - A switch statement with too many cases </li>
   <li>Method comments - A method is filled with explanatory comments</li>
-  </ul>
+ </ul>
+ 
+ 
   
-  <b> Detection Criteria</b>
-  <img src="https://demos.moseskirathe.com/jscent/images/detection-criteria.png" width="700" height="300">
+<b> Detection Criteria</b></br>
+<img src="https://demos.moseskirathe.com/jscent/images/detection-criteria.png" width="700" height="300">
  
 
 <b>Credit and References</b> 
 Initial program parsing done using the esprima node library (esprima.org)
+
 JSNose: Detecting JavaScript code smells <a href="https://www.ece.ubc.ca/~amesbah/docs/scam13.pdf">https://www.ece.ubc.ca/~amesbah/docs/scam13.pdf</a>
