@@ -25,6 +25,31 @@ module.exports = class FUNCTIONEXPRESSION {
         this.body = temp;
         temp.parse(node.body);
     }
+
+        evaluate (table) {
+        let id = null;
+            if (this.id) {
+                id = this.id.evaluate(table);
+            }
+            for (let param of this.params) {
+                param.evaluate(table);
+            }
+            this.body.evaluate(table);
+            if (this.loc.end.line - this.loc.start.line > 50) {
+                if (id) {
+                    table.longMethods.push({name: id, line: this.loc.start.line});
+                } else {
+                    table.longMethods.push({name: "anonymous", line: this.loc.start.line});
+                }
+            }
+            if (this.loc.comments.length > 5) {
+                if (id) {
+                    table.longMethods.push({name: id, line: this.loc.start.line});
+                } else {
+                    table.longMethods.push({name: "anonymous", line: this.loc.start.line});
+                }
+            }
+        }
 }
 
 const IDENTIFIER = require("./IDENTIFIER");

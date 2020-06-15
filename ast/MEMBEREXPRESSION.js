@@ -1,9 +1,16 @@
 
 module.exports = class MEMBEREXPRESSION{
-    parse(node){
+
+    parse(node) {
         this.loc = node.loc;
         this.computed = node.computed;
         this.object = new EXPRESSION();
+        if (node.property.type.includes("MemberExpression")) {
+            this.object.parse(node.object);
+            this.callChain = this.object.callChain + 1;
+        } else {
+            this.callChain = 1;
+        }
         this.object.parse(node.object);
         this.property = new EXPRESSION();
         this.property.parse(node.property);
@@ -16,6 +23,9 @@ module.exports = class MEMBEREXPRESSION{
             table.memberCalls[object].push(this.loc);
         } else {
             table.memberCalls[object] = [this.loc];
+        }
+        if (this.callChain > 3) {
+            table.longChains.push(this.loc);
         }
     }
 }

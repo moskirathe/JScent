@@ -241,13 +241,16 @@ const program = "const express = require('express');\n" +
     "}"
 
 esprima.tokenize(program);
-console.log(esprima.parse(program,{loc:true}));
+console.log(esprima.parse(program,{loc:true, comment: true}));
 let p = new PROGRAM();
-p.parse(esprima.parse(program, {loc:true}));
+p.parse(esprima.parse(program, {loc:true, comment: true}));
 let table = {
     memberCalls: {},
-    defined: {}
+    defined: {},
+    longChains: [],
+    longMethods: [],
+    commentMethods: []
 }
-p.evaluate(esprima.parse(program, {loc:true}));
+p.evaluate(table);
 
 
