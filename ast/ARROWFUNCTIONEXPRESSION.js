@@ -5,7 +5,6 @@ const EXPRESSION = require("./EXPRESSION");
 
 export default class ARROWFUNCTIONEXPRESSION {
     parse(node) {
-        this.elements = [];
         this.id = new IDENTIFIER();
         this.id.parse(node.id);
         this.params = [];
