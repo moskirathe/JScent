@@ -30,11 +30,7 @@ Put all the JS files you want to analyze in the /input folder, and run main.js t
  </ul>
  
  
-  
-<b> Detection Criteria</b>
 
-<img src="https://demos.moseskirathe.com/jscent/images/detection-criteria-updated.png" width="700" height="300">
- 
 
 <b>Credit and References</b> 
 <ul>
